@@ -45,16 +45,16 @@
 <body class="min-h-screen flex flex-col">
 
     <header class="sticky top-0 z-50 bg-enderDark/95 border-b border-enderPurple/20 backdrop-filter backdrop-blur-lg px-6 py-4 md:px-12 flex justify-between items-center">
-        <a href="../index.html" class="flex items-center gap-3 font-grotesk font-bold text-2xl tracking-wider text-white hover:opacity-90 transition">
+        <a href="../" class="flex items-center gap-3 font-grotesk font-bold text-2xl tracking-wider text-white hover:opacity-90 transition">
             <img src="https://lh3.googleusercontent.com/d/1WiP_0ooq72Y1FTJjHH0d-XgLAihA9Mtj" alt="YTTA Logo" class="w-10 h-10 rounded-lg border-2 border-enderPurple object-cover">
             YTTA<span class="text-enderPurple">MC</span>
         </a>
         <nav class="hidden md:block">
             <ul class="flex gap-8 font-semibold text-sm">
-                <li><a href="../index.html" class="hover:text-enderPurple transition">Home</a></li>
-                <li><a href="../index.html#pemerintah" class="hover:text-enderPurple transition">Pemerintah</a></li>
-                <li><a href="index.html" class="text-enderPurple font-bold">Gallery</a></li>
-                <li><a href="../faq/index.html" class="hover:text-enderPurple transition">FAQ</a></li>
+                <li><a href="../" class="hover:text-enderPurple transition">Home</a></li>
+                <li><a href="../#pemerintah" class="hover:text-enderPurple transition">Pemerintah</a></li>
+                <li><a href="./" class="text-enderPurple font-bold">Gallery</a></li>
+                <li><a href="../faq/" class="hover:text-enderPurple transition">FAQ</a></li>
             </ul>
         </nav>
     </header>
@@ -127,24 +127,21 @@
             renderPlayersGrid();
         };
 
-        // FUNGSI BARU: Mencocokkan nilai properti p.skin ke data nama di governmentData
         function getPlayerHeadUrlBySkin(skinKey) {
             let foundUrl = "";
             
             if (!skinKey || skinKey.trim() === "") {
-                return "https://lh3.googleusercontent.com/d/1thSevsAH560Qec0xgsHx4bDXw1kN5T2I"; // Cadangan Steve default
+                return "https://lh3.googleusercontent.com/d/1thSevsAH560Qec0xgsHx4bDXw1kN5T2I"; 
             }
 
             let targetSkin = skinKey.trim().toLowerCase();
             
             if (typeof governmentData !== 'undefined') {
-                // 1. Cek di list Pemda berdasarkan key name
                 let matchPemda = governmentData.pemda.find(p => p.name.trim().toLowerCase() === targetSkin);
                 if (matchPemda && matchPemda.skinUrl) {
                     foundUrl = matchPemda.skinUrl;
                 }
                 
-                // 2. Cek di list Staff berdasarkan key name
                 if (!foundUrl) {
                     let matchStaff = governmentData.staff.find(s => s.name.trim().toLowerCase() === targetSkin);
                     if (matchStaff && matchStaff.skinUrl) {
@@ -153,12 +150,10 @@
                 }
             }
             
-            // Jika id skin tidak terdaftar di list governmentData, berikan kepala Steve cadangan
             if (!foundUrl || foundUrl.trim() === "") {
                 return "https://lh3.googleusercontent.com/d/1thSevsAH560Qec0xgsHx4bDXw1kN5T2I"; 
             }
             
-            // Kompresi otomatis resolusi asset link Drive (=w100)
             if (foundUrl.includes("lh3.googleusercontent.com") && !foundUrl.includes("=w100")) {
                 foundUrl = foundUrl + "=w100";
             }
@@ -166,7 +161,6 @@
             return foundUrl;
         }
 
-        // FUNGSI RENDER MENU UTAMA GALLERY
         function renderPlayersGrid() {
             const container = document.getElementById("players-grid-container");
             if (!container || typeof playersData === 'undefined') return;
@@ -175,7 +169,6 @@
             Object.keys(playersData).forEach(key => {
                 const p = playersData[key];
                 
-                // SYSTEM UPDATE: Mengirim properti skin (misal: p.skin = "Steve") ke fungsi pencari URL gambar
                 let finalHeadUrl = getPlayerHeadUrlBySkin(p.skin);
 
                 container.innerHTML += `
@@ -273,7 +266,6 @@
             document.getElementById("lightboxModal").classList.replace("hidden", "flex");
         }
 
-        // CLOSE MODAL LIGHTBOX
         function closeLightbox() { document.getElementById("lightboxModal").classList.replace("flex", "hidden"); }
         document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
     </script>
