@@ -39,17 +39,18 @@
 </head>
 <body class="min-h-screen flex flex-col">
 
+    <!-- HEADER DENGAN LINK BERSIH (TANPA INDEX.HTML) -->
     <header class="sticky top-0 z-50 bg-enderDark/95 border-b border-enderPurple/20 backdrop-filter backdrop-blur-lg px-6 py-4 md:px-12 flex justify-between items-center">
-        <a href="../index.html" class="flex items-center gap-3 font-grotesk font-bold text-2xl tracking-wider text-white hover:opacity-90 transition">
+        <a href="../" class="flex items-center gap-3 font-grotesk font-bold text-2xl tracking-wider text-white hover:opacity-90 transition">
             <img src="https://lh3.googleusercontent.com/d/1WiP_0ooq72Y1FTJjHH0d-XgLAihA9Mtj" alt="YTTA Logo" class="w-10 h-10 rounded-lg border-2 border-enderPurple object-cover">
             YTTA<span class="text-enderPurple">MC</span>
         </a>
         <nav class="hidden md:block">
             <ul class="flex gap-8 font-semibold text-sm">
-                <li><a href="../index.html" class="hover:text-enderPurple transition">Home</a></li>
-                <li><a href="../index.html#pemerintah" class="hover:text-enderPurple transition">Pemerintah</a></li>
-                <li><a href="../gallery/index.html" class="hover:text-enderPurple transition">Gallery</a></li>
-                <li><a href="index.html" class="text-enderPurple font-bold">FAQ</a></li>
+                <li><a href="../" class="hover:text-enderPurple transition">Home</a></li>
+                <li><a href="../#pemerintah" class="hover:text-enderPurple transition">Pemerintah</a></li>
+                <li><a href="../gallery/" class="hover:text-enderPurple transition">Gallery</a></li>
+                <li><a href="./" class="text-enderPurple font-bold">FAQ</a></li>
             </ul>
         </nav>
     </header>
@@ -122,7 +123,7 @@
                 </div>
             </div>
 
-            <!-- ACCORDION NO 4: PROTEKSI GRIEFING (REDPROTECT VERSION) -->
+            <!-- ACCORDION NO 4: PROTEKSI GRIEFING -->
             <div class="border border-white/5 rounded-xl overflow-hidden bg-enderDark/60 transition hover:border-enderPurple/30">
                 <button onclick="toggleAccordion(4)" class="w-full py-4 px-6 text-left font-bold text-base text-gray-200 hover:text-enderPurple flex justify-between items-center transition">
                     <span>Bagaimana cara melindungi area rumah agar tidak dihancurkan (Land Claim)?</span>
@@ -131,7 +132,6 @@
                 <div id="accordion-content-4" class="hidden px-6 pb-6 text-sm text-gray-400 leading-relaxed border-t border-white/5 pt-4 flex flex-col gap-4">
                     <p>Server YTTA menggunakan plugin <strong class="text-white font-semibold">RedProtect</strong> untuk mengamankan bangunan. Perlindungan ini otomatis mengunci area dari dasar batuan paling bawah (*bedrock*) hingga batas langit tertinggi. Kamu bisa memilih salah satu dari 2 cara mudah di bawah ini:</p>
                     
-                    <!-- Cara 1: Pagar -->
                     <div class="bg-black/20 p-4 rounded-xl border border-white/5">
                         <h4 class="text-white font-bold mb-1.5 flex items-center gap-2 text-xs uppercase tracking-wider text-enderGlow">
                             <i class="fa-solid fa-border-all"></i> Cara 1: Menggunakan Pagar (Metode Otomatis)
@@ -143,7 +143,6 @@
                         </ol>
                     </div>
 
-                    <!-- Cara 2: Wand -->
                     <div class="bg-black/20 p-4 rounded-xl border border-white/5">
                         <h4 class="text-white font-bold mb-1.5 flex items-center gap-2 text-xs uppercase tracking-wider text-enderGlow">
                             <i class="fa-solid fa-wand-magic-sparkles"></i> Cara 2: Menggunakan Alat Seleksi (Wand)
@@ -156,7 +155,6 @@
                         </ol>
                     </div>
 
-                    <!-- Daftar Perintah Tambahan -->
                     <div class="bg-enderPurple/5 p-4 rounded-xl border border-enderPurple/10">
                         <h4 class="text-white font-bold mb-2 flex items-center gap-2 text-xs">
                             <i class="fa-solid fa-terminal text-enderPurple"></i> Peraturan & Perintah Tambahan RedProtect:
@@ -166,7 +164,7 @@
                             <li><span class="text-enderGlow inline-block w-44">/rp removemember [Nama]</span> <span class="text-gray-400 font-sans">&rarr; Mencabut izin bangun milik teman.</span></li>
                             <li><span class="text-enderGlow inline-block w-44">/rp info</span> <span class="text-gray-400 font-sans">&rarr; Melihat informasi pemilik dan batas wilayah klaim tempat kamu berdiri.</span></li>
                             <li><span class="text-enderGlow inline-block w-44">/rp flag</span> <span class="text-gray-400 font-sans">&rarr; Membuka Menu Untuk Mengatur Permission </span></li>
-                             <li><span class="text-enderGlow inline-block w-44">/rp delete</span> <span class="text-gray-400 font-sans">&rarr; Menghapus klaim perlindungan tanah (jika ingin pindah lokasi).</span></li>
+                            <li><span class="text-enderGlow inline-block w-44">/rp delete</span> <span class="text-gray-400 font-sans">&rarr; Menghapus klaim perlindungan tanah (jika ingin pindah lokasi).</span></li>
                         </ul>
                     </div>
                 </div>
