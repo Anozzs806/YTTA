@@ -50,6 +50,12 @@
         .animate-gallery-flow:hover {
             animation-play-state: paused;
         }
+
+        /* Efek rendering agar pixel block Minecraft tetap tajam maksimal */
+        .pixelated {
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col">
@@ -118,7 +124,7 @@
             <p class="relative z-10 text-xs text-enderPurple/80 font-bold tracking-wider uppercase bg-enderDark/40 px-4 py-2 rounded-full max-w-max mx-auto border border-enderPurple/10">VERSION 26.1.2</p>
         </section>
 
-        <!-- SECTION PEMERINTAH -->
+        <!-- SECTION PEMERINTAH (OTOMATIS DIINJEKSI VIA JS SINKRON DENGAN GALLERY-DATA.JS) -->
         <section id="pemerintah" class="w-full bg-enderCard/40 border border-enderPurple/10 rounded-2xl p-8 flex flex-col items-center gap-8">
             <div class="text-center">
                 <h2 class="font-grotesk font-bold text-3xl tracking-wide uppercase">Struktur Pemerintah</h2>
@@ -126,62 +132,13 @@
             </div>
 
             <div class="w-full flex flex-col items-center gap-12">
-                <div class="flex flex-col items-center text-center">
-                    <div class="relative group">
-                        <div class="absolute left-1/2 bottom-[-48px] w-0.5 h-12 bg-enderPurple/30 -translate-x-1/2 hidden md:block"></div>
-                        <div class="bg-enderDark/90 border-2 border-enderPurple p-4 rounded-xl flex flex-col items-center gap-3 w-40 transition transform hover:scale-105 shadow-lg shadow-enderPurple/10">
-                            <div class="w-20 h-20 bg-enderCard rounded-lg overflow-hidden border border-enderPurple/30">
-                                <img src="https://lh3.googleusercontent.com/d/1gGAJ-CoFWBIXS_d-SQdeZavlk-L2Rjp2" alt="Anozzs" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/100x100/140d24/a855f7?text=Anozzs'">
-                            </div>
-                            <span class="font-grotesk font-bold text-white">Anozzs</span>
-                            <span class="text-[10px] bg-enderPurple/20 text-enderPurple px-3 py-1 rounded-full uppercase font-bold tracking-wider">PEMDA</span>
-                        </div>
-                    </div>
-                </div>
+                <!-- Wadah Otomatis Atasan PEMDA -->
+                <div class="flex flex-col items-center text-center" id="pemda-container"></div>
 
                 <div class="relative w-4/5 h-0.5 bg-enderPurple/30 -mt-6 mb-2 hidden md:block"></div>
 
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 w-full justify-items-center">
-                    <div class="bg-enderDark/80 border border-enderPurple/20 p-4 rounded-xl flex flex-col items-center gap-3 w-36 transition transform hover:scale-105 hover:border-enderPurple/60">
-                        <div class="w-16 h-16 bg-enderCard rounded-lg overflow-hidden border border-enderPurple/30">
-                            <img src="https://lh3.googleusercontent.com/d/1l_NLCW87R6Fstb2s464dGhoFxGCZ3ikK" alt="Shiroku" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/100x100/140d24/a855f7?text=Shiroku'">
-                        </div>
-                        <span class="font-grotesk font-bold text-sm text-gray-200">ShirokuHimatsu</span>
-                        <span class="text-[9px] bg-white/5 text-gray-400 px-2.5 py-0.5 rounded-full uppercase font-semibold">RT</span>
-                    </div>
-
-                    <div class="bg-enderDark/80 border border-enderPurple/20 p-4 rounded-xl flex flex-col items-center gap-3 w-36 transition transform hover:scale-105 hover:border-enderPurple/60">
-                        <div class="w-16 h-16 bg-enderCard rounded-lg overflow-hidden border border-enderPurple/30">
-                            <img src="https://lh3.googleusercontent.com/d/1Fh4M7D8ltcSSVTSjbRSCW52g5w83oNlL" alt="DrMurphy30" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/100x100/140d24/a855f7?text=DrMurphy30'">
-                        </div>
-                        <span class="font-grotesk font-bold text-sm text-gray-200">DrMurphy30</span>
-                        <span class="text-[9px] bg-white/5 text-gray-400 px-2.5 py-0.5 rounded-full uppercase font-semibold">KADES</span>
-                    </div>
-
-                    <div class="bg-enderDark/80 border border-enderPurple/20 p-4 rounded-xl flex flex-col items-center gap-3 w-36 transition transform hover:scale-105 hover:border-enderPurple/60">
-                        <div class="w-16 h-16 bg-enderCard rounded-lg overflow-hidden border border-enderPurple/30">
-                            <img src="https://lh3.googleusercontent.com/d/1faMhY1b1QSwoStIvn84iMmUc-5S8-5qq" alt="YantoTambalBan" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/100x100/140d24/a855f7?text=YeetPotata'">
-                        </div>
-                        <span class="font-grotesk font-bold text-sm text-gray-200">YantoTambalBan</span>
-                        <span class="text-[9px] bg-white/5 text-gray-400 px-2.5 py-0.5 rounded-full uppercase font-semibold">SATPOL</span>
-                    </div>
-
-                    <div class="bg-enderDark/80 border border-enderPurple/20 p-4 rounded-xl flex flex-col items-center gap-3 w-36 transition transform hover:scale-105 hover:border-enderPurple/60">
-                        <div class="w-16 h-16 bg-enderCard rounded-lg overflow-hidden border border-enderPurple/30">
-                            <img src="https://lh3.googleusercontent.com/d/1RmsD2e8pCEQvd90Ym-F_uYF408Hhpkm4" alt="ZED311" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/100x100/140d24/a855f7?text=Xenon'">
-                        </div>
-                        <span class="font-grotesk font-bold text-sm text-gray-200">ZED311</span>
-                        <span class="text-[9px] bg-white/5 text-gray-400 px-2.5 py-0.5 rounded-full uppercase font-semibold">SATPOL</span>
-                    </div>
-
-                    <div class="bg-enderDark/80 border border-enderPurple/20 p-4 rounded-xl flex flex-col items-center gap-3 w-36 transition transform hover:scale-105 hover:border-enderPurple/60">
-                        <div class="w-16 h-16 bg-enderCard rounded-lg overflow-hidden border border-enderPurple/30">
-                            <img src="https://lh3.googleusercontent.com/d/1thSevsAH560Qec0xgsHx4bDXw1kN5T2I" alt="Ipandora" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/100x100/140d24/a855f7?text=Valkyrie'">
-                        </div>
-                        <span class="font-grotesk font-bold text-sm text-gray-200">Ipandora</span>
-                        <span class="text-[9px] bg-white/5 text-gray-400 px-2.5 py-0.5 rounded-full uppercase font-semibold">RT (Retired)</span>
-                    </div>
-                </div>
+                <!-- Wadah Otomatis Barisan Jajaran Staff -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 w-full justify-items-center" id="staff-grid-container"></div>
             </div>
         </section>
 
@@ -225,11 +182,11 @@
                     </div>
                 </div>
 
-                <!-- Efek Vignette Gradasi Gelap (Agar Teks Tetap Mudah Dibaca) -->
+                <!-- Efek Vignette Gradasi Gelap -->
                 <div class="absolute inset-0 bg-gradient-to-r from-enderDark via-enderDark/80 to-enderDark/40 md:from-enderDark md:via-enderDark/70 md:to-transparent z-10"></div>
                 <div class="absolute inset-0 bg-gradient-to-t from-enderDark via-transparent to-transparent z-10"></div>
 
-                <!-- Konten Teks Utama di Bagian Depan -->
+                <!-- Konten Teks Utama -->
                 <div class="absolute inset-0 z-20 flex flex-col md:flex-row justify-between items-center px-6 md:px-12 py-6 text-center md:text-left gap-4">
                     <div class="flex flex-col gap-1">
                         <h3 class="font-grotesk font-black text-2xl md:text-3xl tracking-wider text-white group-hover:text-enderGlow transition duration-300 flex items-center justify-center md:justify-start gap-3">
@@ -238,8 +195,6 @@
                         </h3>
                         <p class="text-xs md:text-sm text-gray-400 max-w-md">Lihat dokumentasi, keindahan arsitektur kota, dan mahakarya proyek bangunan yang dibuat oleh para player komunitas.</p>
                     </div>
-                    
-                    <!-- Tombol Aksi Kanan -->
                     <div class="px-5 py-2.5 bg-enderPurple/10 border border-enderPurple/40 group-hover:bg-enderPurple group-hover:text-white rounded-xl text-enderGlow text-xs md:text-sm font-bold tracking-wide transition-all duration-300 whitespace-nowrap shadow-md group-hover:shadow-enderPurple/50 flex items-center gap-2">
                         Buka Folder Dokumentasi <i class="fa-solid fa-arrow-right group-hover:translate-x-1.5 transition-transform"></i>
                     </div>
@@ -273,7 +228,6 @@
                             Join Server Discord Resmi YTTA Untuk Membagikan Hasil Building Kalian, Sertakan Koordinat, Judul Dan Deskripsi, Dengan Ini Dapat Memerkan Kota YTTA Hasil Kerja Keras Para Player.
                         </p>
                     </div>
-                    
                     <a href="https://discord.gg/sbfn4sSze9" target="_blank" class="w-full py-3.5 bg-discordBlurple hover:bg-[#4752c4] text-white font-bold rounded-lg text-center transition flex items-center justify-center gap-2 shadow-lg shadow-discordBlurple/20">
                         <i class="fa-brands fa-discord"></i> Join Discord Server
                     </a>
@@ -330,8 +284,66 @@
         <p>Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.</p>
     </footer>
 
+    <!-- INJECT DATABASE TERPUSAT -->
+    <script src="gallery-data.js"></script>
     <script>
-        window.onload = function() { fetchServerStatus(); };
+        window.onload = function() { 
+            fetchServerStatus(); 
+            renderGovernmentGrid(); // <-- Menjalankan sistem pembacaan dinamis
+        };
+
+        // FUNGSI INJEKSI STRUKTUR KABINET UTAMA DARI JS
+        function renderGovernmentGrid() {
+            const pemdaContainer = document.getElementById("pemda-container");
+            const staffContainer = document.getElementById("staff-grid-container");
+            
+            if (!pemdaContainer || !staffContainer || typeof governmentData === 'undefined') return;
+            
+            pemdaContainer.innerHTML = "";
+            staffContainer.innerHTML = "";
+
+            // 1. Render Jajaran Atasan (PEMDA)
+            governmentData.pemda.forEach(p => {
+                let finalUrl = p.skinUrl && p.skinUrl.trim() !== "" ? p.skinUrl : "https://lh3.googleusercontent.com/d/1thSevsAH560Qec0xgsHx4bDXw1kN5T2I";
+                if (finalUrl.includes("lh3.googleusercontent.com") && !finalUrl.includes("=w100")) {
+                    finalUrl = finalUrl + "=w100";
+                }
+
+                pemdaContainer.innerHTML = `
+                    <div class="relative group">
+                        <div class="absolute left-1/2 bottom-[-48px] w-0.5 h-12 bg-enderPurple/30 -translate-x-1/2 hidden md:block"></div>
+                        <div class="bg-enderDark/90 border-2 border-enderPurple p-4 rounded-xl flex flex-col items-center gap-3 w-40 transition transform hover:scale-105 shadow-lg shadow-enderPurple/10">
+                            <!-- Wadah Kotak Sedikit Melengkung dengan Jarak Pas w-11 h-11 -->
+                            <div class="w-14 h-14 bg-enderCard rounded-xl flex items-center justify-center border border-enderPurple/30 overflow-hidden">
+                                <img src="${finalUrl}" alt="${p.name}" class="w-11 h-11 object-cover rounded pixelated" onerror="this.src='https://placehold.co/100x100/140d24/a855f7?text=${p.name[0]}'">
+                            </div>
+                            <span class="font-grotesk font-bold text-white">${p.name}</span>
+                            <span class="text-[10px] bg-enderPurple/20 text-enderPurple px-3 py-1 rounded-full uppercase font-bold tracking-wider">${p.role}</span>
+                        </div>
+                    </div>`;
+            });
+
+            // 2. Render Jajaran Anggota Kabinet (RT, KADES, SATPOL)
+            governmentData.staff.forEach(s => {
+                // Skip otomatis jika rolenya adalah KULI, WARGA, atau sejenisnya agar tidak masuk ke jajaran kabinet utama Home
+                if (s.role === "KULI" || s.role === "WARGA") return;
+
+                let finalUrl = s.skinUrl && s.skinUrl.trim() !== "" ? s.skinUrl : "https://lh3.googleusercontent.com/d/1thSevsAH560Qec0xgsHx4bDXw1kN5T2I";
+                if (finalUrl.includes("lh3.googleusercontent.com") && !finalUrl.includes("=w100")) {
+                    finalUrl = finalUrl + "=w100";
+                }
+
+                staffContainer.innerHTML += `
+                    <div class="bg-enderDark/80 border border-enderPurple/20 p-4 rounded-xl flex flex-col items-center gap-3 w-36 transition transform hover:scale-105 hover:border-enderPurple/60">
+                        <!-- Wadah Kotak Sedikit Melengkung dengan Jarak Pas w-11 h-11 -->
+                        <div class="w-14 h-14 bg-enderCard rounded-xl flex items-center justify-center border border-enderPurple/30 overflow-hidden">
+                            <img src="${finalUrl}" alt="${s.name}" class="w-11 h-11 object-cover rounded pixelated" onerror="this.src='https://placehold.co/100x100/140d24/a855f7?text=${s.name[0]}'">
+                        </div>
+                        <span class="font-grotesk font-bold text-sm text-gray-200 truncate w-full text-center">${s.name}</span>
+                        <span class="text-[9px] bg-white/5 text-gray-400 px-2.5 py-0.5 rounded-full uppercase font-semibold text-center truncate w-full">${s.role}</span>
+                    </div>`;
+            });
+        }
 
         function fetchServerStatus() {
             const statusText = document.getElementById("status-text");
