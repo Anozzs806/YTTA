@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YTTA Minecraft Community Server - Gallery</title>
+    
+    <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/1WiP_0ooq72Y1FTJjHH0d-XgLAihA9Mtj">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        enderDark: '#06020c',
+                        enderCard: '#130924',
+                        enderPurple: '#a855f7',
+                        enderGlow: '#c084fc',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        grotesk: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #06020c; color: #ffffff; font-family: 'Poppins', sans-serif; overflow-x: hidden; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #06020c; }
+        ::-webkit-scrollbar-thumb { background: #1f113a; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a855f7; }
+        
+        /* Efek rendering agar pixel block Minecraft tetap tajam maksimal */
+        .pixelated {
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <header class="sticky top-0 z-50 bg-enderDark/95 border-b border-enderPurple/20 backdrop-filter backdrop-blur-lg px-6 py-4 md:px-12 flex justify-between items-center">
+        <a href="../index.html" class="flex items-center gap-3 font-grotesk font-bold text-2xl tracking-wider text-white hover:opacity-90 transition">
+            <img src="https://lh3.googleusercontent.com/d/1WiP_0ooq72Y1FTJjHH0d-XgLAihA9Mtj" alt="YTTA Logo" class="w-10 h-10 rounded-lg border-2 border-enderPurple object-cover">
+            YTTA<span class="text-enderPurple">MC</span>
+        </a>
+        <nav class="hidden md:block">
+            <ul class="flex gap-8 font-semibold text-sm">
+                <li><a href="../index.html" class="hover:text-enderPurple transition">Home</a></li>
+                <li><a href="../index.html#pemerintah" class="hover:text-enderPurple transition">Pemerintah</a></li>
+                <li><a href="index.html" class="text-enderPurple font-bold">Gallery</a></li>
+                <li><a href="../faq/index.html" class="hover:text-enderPurple transition">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="flex-grow flex flex-col items-center py-12 px-4 md:px-12 max-w-6xl w-full mx-auto gap-8">
+        
+        <section id="gallery" class="w-full bg-enderCard/40 border border-enderPurple/10 rounded-2xl p-8 flex flex-col gap-6">
+            <div class="text-center">
+                <h2 class="font-grotesk font-bold text-3xl tracking-wide uppercase">YTTA Gallery</h2>
+                <span class="text-xs text-enderPurple font-bold tracking-wider uppercase block mt-1">Join Discord Agar Project Building Kalian Masuk Ke Sini</span>
+                <div class="h-1 w-24 bg-enderPurple mx-auto mt-3 rounded"></div>
+            </div>
+
+            <div class="flex items-center gap-2 bg-enderDark/80 border border-enderPurple/10 px-4 py-2.5 rounded-xl text-sm font-semibold text-gray-400">
+                <button type="button" onclick="triggerHardwareBack()" class="hover:text-enderPurple transition flex items-center cursor-pointer outline-none select-none">
+                    <i class="fa-solid fa-folder-open text-enderPurple mr-1.5"></i> Gallery Utama
+                </button>
+                <span id="breadcrumb-player" class="hidden flex items-center">
+                    <i class="fa-solid fa-chevron-right text-xs text-gray-600 mx-1"></i> 
+                    <span class="text-enderPurple" id="bc-player-name">Player</span>
+                </span>
+            </div>
+
+            <div class="relative min-h-[400px] w-full">
+                <div id="gallery-level1" class="transition-all duration-300">
+                    <p class="text-center text-sm text-gray-400 mb-6">Pilih salah satu folder builder untuk melihat isi karya rancangan mereka:</p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="players-grid-container"></div>
+                </div>
+
+                <div id="gallery-level2" class="hidden transition-all duration-300">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="font-grotesk font-bold text-xl text-white flex items-center gap-2">
+                            <i class="fa-regular fa-folder-open text-enderPurple"></i> Folder: <span id="current-player-title" class="text-enderPurple"></span>
+                        </h3>
+                        <button type="button" onclick="triggerHardwareBack()" class="text-xs bg-white/5 border border-white/10 px-3 py-1.5 rounded-lg hover:bg-enderPurple/20 hover:border-enderPurple transition flex items-center gap-1.5 cursor-pointer outline-none">
+                            <i class="fa-solid fa-arrow-left"></i> Kembali ke List Player
+                        </button>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" id="photos-grid-container"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="lightboxModal" class="fixed inset-0 z-[2000] bg-black/95 backdrop-filter backdrop-blur-md hidden items-center justify-center p-4">
+        <div class="relative max-w-4xl w-full flex flex-col items-center gap-4">
+            <button onclick="closeLightbox()" class="absolute -top-10 right-0 md:-right-8 text-white hover:text-enderPurple text-3xl transition"><i class="fa-solid fa-xmark"></i></button>
+            <img id="lightboxImg" src="" alt="Zoomed Screenshot" class="max-h-[75vh] max-w-full rounded-xl border border-enderPurple/30 shadow-2xl object-contain">
+            <div class="text-center max-w-2xl">
+                <h4 id="lightboxTitle" class="font-grotesk font-bold text-xl text-white"></h4>
+                <p id="lightboxDesc" class="text-sm text-gray-400 mt-1"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="toastAlert" class="fixed bottom-[-100px] left-1/2 -translate-x-1/2 z-[3000] bg-enderPurple px-6 py-3 rounded-full text-sm font-bold text-white shadow-2xl transition-all duration-500 flex items-center gap-2">
+        <span id="toastMessage">Konstruksi!</span>
+    </div>
+
+    <footer class="w-full bg-black/80 border-t border-enderPurple/10 py-8 px-6 text-center text-xs text-gray-500">
+        <p class="font-semibold text-gray-400 mb-2">© 2026 YTTA Community. All rights reserved.</p>
+    </footer>
+
+    <script src="../gallery-data.js"></script>
+    <script>
+        history.replaceState({ view: "root" }, "");
+
+        window.onload = function() {
+            renderPlayersGrid();
+        };
+
+        // FUNGSI BARU: Mencocokkan nilai properti p.skin ke data nama di governmentData
+        function getPlayerHeadUrlBySkin(skinKey) {
+            let foundUrl = "";
+            
+            if (!skinKey || skinKey.trim() === "") {
+                return "https://lh3.googleusercontent.com/d/1thSevsAH560Qec0xgsHx4bDXw1kN5T2I"; // Cadangan Steve default
+            }
+
+            let targetSkin = skinKey.trim().toLowerCase();
+            
+            if (typeof governmentData !== 'undefined') {
+                // 1. Cek di list Pemda berdasarkan key name
+                let matchPemda = governmentData.pemda.find(p => p.name.trim().toLowerCase() === targetSkin);
+                if (matchPemda && matchPemda.skinUrl) {
+                    foundUrl = matchPemda.skinUrl;
+                }
+                
+                // 2. Cek di list Staff berdasarkan key name
+                if (!foundUrl) {
+                    let matchStaff = governmentData.staff.find(s => s.name.trim().toLowerCase() === targetSkin);
+                    if (matchStaff && matchStaff.skinUrl) {
+                        foundUrl = matchStaff.skinUrl;
+                    }
+                }
+            }
+            
+            // Jika id skin tidak terdaftar di list governmentData, berikan kepala Steve cadangan
+            if (!foundUrl || foundUrl.trim() === "") {
+                return "https://lh3.googleusercontent.com/d/1thSevsAH560Qec0xgsHx4bDXw1kN5T2I"; 
+            }
+            
+            // Kompresi otomatis resolusi asset link Drive (=w100)
+            if (foundUrl.includes("lh3.googleusercontent.com") && !foundUrl.includes("=w100")) {
+                foundUrl = foundUrl + "=w100";
+            }
+            
+            return foundUrl;
+        }
+
+        // FUNGSI RENDER MENU UTAMA GALLERY
+        function renderPlayersGrid() {
+            const container = document.getElementById("players-grid-container");
+            if (!container || typeof playersData === 'undefined') return;
+            
+            container.innerHTML = "";
+            Object.keys(playersData).forEach(key => {
+                const p = playersData[key];
+                
+                // SYSTEM UPDATE: Mengirim properti skin (misal: p.skin = "Steve") ke fungsi pencari URL gambar
+                let finalHeadUrl = getPlayerHeadUrlBySkin(p.skin);
+
+                container.innerHTML += `
+                    <div onclick="openPlayerSub('${key}')" class="group bg-enderDark/80 hover:bg-enderCard border border-enderPurple/10 hover:border-enderPurple/60 p-5 rounded-xl text-center cursor-pointer transition duration-300 transform hover:-translate-y-1">
+                        
+                        <div class="w-14 h-14 bg-enderDark/40 rounded-xl flex items-center justify-center mx-auto mb-3 border border-enderPurple/20 group-hover:scale-110 transition duration-300 overflow-hidden">
+                            <img src="${finalHeadUrl}" alt="${p.name}" class="w-11 h-11 object-cover rounded pixelated" onerror="this.src='https://placehold.co/100x100/140d24/a855f7?text=${p.name[0]}'">
+                        </div>
+                        
+                        <h4 class="font-grotesk font-bold text-sm tracking-wide text-white group-hover:text-enderPurple transition mb-1 truncate">${p.name}</h4>
+                        <span class="text-[10px] text-gray-500 uppercase font-bold tracking-wider block mb-2 truncate">${p.role}</span>
+                        <span class="inline-flex items-center gap-1 text-[10px] bg-enderPurple/10 group-hover:bg-enderPurple/20 text-enderPurple px-2 py-0.5 rounded-full font-bold transition">
+                            <i class="fa-solid fa-folder-closed"></i> Buka Folder
+                        </span>
+                    </div>`;
+            });
+        }
+
+        function openPlayerSub(playerKey) {
+            const p = playersData[playerKey];
+            document.getElementById("current-player-title").innerText = p.name;
+            document.getElementById("bc-player-name").innerText = p.name;
+            const container = document.getElementById("photos-grid-container");
+            container.innerHTML = "";
+
+            p.photos.forEach((photo, index) => {
+                if (photo.url !== "") {
+                    let previewUrl = photo.url;
+                    if(photo.url.includes("lh3.googleusercontent.com")) {
+                        previewUrl = photo.url + "=w600";
+                    }
+                    container.innerHTML += `
+                        <div onclick="openLightbox('${photo.url}', '${photo.label}', '${photo.desc}')" class="group bg-enderDark/80 border border-enderPurple/10 hover:border-enderPurple/40 rounded-xl overflow-hidden cursor-pointer transition duration-300 shadow-lg">
+                            <div class="h-44 w-full bg-black overflow-hidden relative">
+                                <img src="${previewUrl}" alt="${photo.label}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://placehold.co/600x400/130924/a855f7?text=${photo.label}'">
+                            </div>
+                            <div class="p-4">
+                                <h4 class="font-grotesk font-bold text-sm text-white">${photo.label}</h4>
+                                <p class="text-xs text-gray-400 mt-1 line-clamp-2">${photo.desc}</p>
+                            </div>
+                        </div>`;
+                } else {
+                    container.innerHTML += `
+                        <div onclick="showToast('Slot ${index + 1} sedang dalam masa konstruksi!')" class="group bg-enderDark/30 border-2 border-dashed border-enderPurple/20 hover:border-enderPurple/50 rounded-xl p-6 flex flex-col justify-center items-center text-center cursor-pointer transition duration-300 min-h-[260px]">
+                            <i class="fa-solid fa-hammer text-xl text-enderPurple/50 mb-3 animate-bounce"></i>
+                            <h4 class="font-grotesk font-bold text-sm text-enderPurple/60">Coming Soon</h4>
+                        </div>`;
+                }
+            });
+
+            document.getElementById("gallery-level1").classList.add("hidden");
+            document.getElementById("gallery-level2").classList.remove("hidden");
+            document.getElementById("breadcrumb-player").classList.remove("hidden");
+            
+            history.pushState({ view: "folder" }, "");
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function navToRoot() {
+            document.getElementById("gallery-level2").classList.add("hidden");
+            document.getElementById("breadcrumb-player").classList.add("hidden");
+            document.getElementById("gallery-level1").classList.remove("hidden");
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function triggerHardwareBack() {
+            const level2 = document.getElementById("gallery-level2");
+            if (level2 && !level2.classList.contains("hidden")) {
+                history.back();
+            }
+        }
+
+        window.addEventListener("popstate", function(event) {
+            if (event.state && event.state.view === "root") {
+                navToRoot();
+            } else if (!event.state) {
+                navToRoot();
+            }
+        });
+
+        function showToast(message) {
+            const toast = document.getElementById("toastAlert");
+            document.getElementById("toastMessage").innerText = message;
+            toast.classList.replace("bottom-[-100px]", "bottom-10");
+            setTimeout(() => { toast.classList.replace("bottom-10", "bottom-[-100px]"); }, 3000);
+        }
+
+        function openLightbox(url, title, desc) {
+            let fullUrl = url;
+            if(url.includes("lh3.googleusercontent.com")) { fullUrl = url + "=s0"; }
+            
+            document.getElementById("lightboxImg").src = fullUrl;
+            document.getElementById("lightboxTitle").innerText = title;
+            document.getElementById("lightboxDesc").innerText = desc;
+            document.getElementById("lightboxModal").classList.replace("hidden", "flex");
+        }
+
+        // CLOSE MODAL LIGHTBOX
+        function closeLightbox() { document.getElementById("lightboxModal").classList.replace("flex", "hidden"); }
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+    </script>
+</body>
+</html>

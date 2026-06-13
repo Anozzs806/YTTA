@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YTTA Minecraft Community Server - FAQ & Panduan</title>
+    
+    <!-- LOGO UNTUK BAR / TAB WEBSITE (FAVICON) -->
+    <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/1WiP_0ooq72Y1FTJjHH0d-XgLAihA9Mtj">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        enderDark: '#06020c',
+                        enderCard: '#130924',
+                        enderPurple: '#a855f7',
+                        enderGlow: '#c084fc',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        grotesk: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #06020c; color: #ffffff; font-family: 'Poppins', sans-serif; overflow-x: hidden; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #06020c; }
+        ::-webkit-scrollbar-thumb { background: #1f113a; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a855f7; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <header class="sticky top-0 z-50 bg-enderDark/95 border-b border-enderPurple/20 backdrop-filter backdrop-blur-lg px-6 py-4 md:px-12 flex justify-between items-center">
+        <a href="../index.html" class="flex items-center gap-3 font-grotesk font-bold text-2xl tracking-wider text-white hover:opacity-90 transition">
+            <img src="https://lh3.googleusercontent.com/d/1WiP_0ooq72Y1FTJjHH0d-XgLAihA9Mtj" alt="YTTA Logo" class="w-10 h-10 rounded-lg border-2 border-enderPurple object-cover">
+            YTTA<span class="text-enderPurple">MC</span>
+        </a>
+        <nav class="hidden md:block">
+            <ul class="flex gap-8 font-semibold text-sm">
+                <li><a href="../index.html" class="hover:text-enderPurple transition">Home</a></li>
+                <li><a href="../index.html#pemerintah" class="hover:text-enderPurple transition">Pemerintah</a></li>
+                <li><a href="../gallery/index.html" class="hover:text-enderPurple transition">Gallery</a></li>
+                <li><a href="index.html" class="text-enderPurple font-bold">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="flex-grow flex flex-col items-center py-12 px-4 md:px-12 max-w-4xl w-full mx-auto gap-8">
+        
+        <div class="text-center">
+            <h2 class="font-grotesk font-bold text-4xl tracking-wide uppercase">FAQ & Information</h2>
+            <p class="text-gray-400 text-sm mt-2">Panduan lengkap cara bergabung ke server YTTA dan tanya-jawab seputar komunitas.</p>
+            <div class="h-1 w-24 bg-enderPurple mx-auto mt-4 rounded"></div>
+        </div>
+
+        <div class="w-full bg-enderCard/40 border border-enderPurple/10 rounded-2xl p-6 md:p-8 flex flex-col gap-4">
+            
+            <!-- ACCORDION NO 1: CARA MASUK SERVER -->
+            <div class="border border-white/5 rounded-xl overflow-hidden bg-enderDark/60 transition hover:border-enderPurple/30">
+                <button onclick="toggleAccordion(1)" class="w-full py-4 px-6 text-left font-bold text-base text-gray-200 hover:text-enderPurple flex justify-between items-center transition">
+                    <span>Bagaimana cara masuk ke Server YTTA Minecraft?</span>
+                    <i id="accordion-icon-1" class="fa-solid fa-chevron-down text-sm transition-transform duration-300"></i>
+                </button>
+                <div id="accordion-content-1" class="hidden px-6 pb-6 text-sm text-gray-400 leading-relaxed border-t border-white/5 pt-4 flex flex-col gap-5">
+                    
+                    <div class="bg-black/20 p-4 rounded-xl border border-white/5">
+                        <h4 class="text-white font-bold mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-desktop text-enderPurple text-xs"></i> Java Edition (PC)
+                        </h4>
+                        <p class="text-xs text-gray-400 mb-3">Salin IP di bawah ini, masuk ke menu <span class="text-gray-200 font-medium">Multiplayer</span> &rarr; <span class="text-gray-200 font-medium">Add Server</span> di game kamu.</p>
+                        <ul class="flex flex-col gap-1 text-xs font-medium pl-1">
+                            <li><span class="text-gray-500 uppercase tracking-wider font-bold inline-block w-28 text-[10px]">Name Server :</span> <span class="text-gray-300">Bebas</span></li>
+                            <li><span class="text-gray-500 uppercase tracking-wider font-bold inline-block w-28 text-[10px]">IP Server   :</span> <span class="text-enderGlow font-semibold bg-enderPurple/10 px-1.5 py-0.5 rounded">mc.ytta.my.id</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-black/20 p-4 rounded-xl border border-white/5">
+                        <h4 class="text-white font-bold mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-mobile-screen-button text-enderPurple text-xs"></i> Bedrock Edition (Mobile / HP / Win10)
+                        </h4>
+                        <p class="text-xs text-gray-400 mb-3">Buka game Minecraft, pilih tab <span class="text-gray-200 font-medium">Play</span> &rarr; <span class="text-gray-200 font-medium">Servers</span>, scroll ke paling bawah lalu klik <span class="text-gray-200 font-medium">Add Server</span>.</p>
+                        <ul class="flex flex-col gap-1 text-xs font-medium pl-1">
+                            <li><span class="text-gray-500 uppercase tracking-wider font-bold inline-block w-28 text-[10px]">Name Server :</span> <span class="text-gray-300">Bebas</span></li>
+                            <li><span class="text-gray-500 uppercase tracking-wider font-bold inline-block w-28 text-[10px]">IP Server   :</span> <span class="text-enderGlow font-semibold bg-enderPurple/10 px-1.5 py-0.5 rounded">mc.ytta.my.id</span></li>
+                            <li><span class="text-gray-500 uppercase tracking-wider font-bold inline-block w-28 text-[10px]">Port        :</span> <span class="text-amber-400 font-semibold">25830</span></li>
+                        </ul>
+                    </div>
+                
+                </div>
+            </div>
+
+            <!-- ACCORDION NO 2: VERSI MINECRAFT -->
+            <div class="border border-white/5 rounded-xl overflow-hidden bg-enderDark/60 transition hover:border-enderPurple/30">
+                <button onclick="toggleAccordion(2)" class="w-full py-4 px-6 text-left font-bold text-base text-gray-200 hover:text-enderPurple flex justify-between items-center transition">
+                    <span>Berapa versi Minecraft yang digunakan server YTTA?</span>
+                    <i id="accordion-icon-2" class="fa-solid fa-chevron-down text-sm transition-transform duration-300"></i>
+                </button>
+                <div id="accordion-content-2" class="hidden px-6 pb-5 text-sm text-gray-400 leading-relaxed border-t border-white/5 pt-3">
+                    Server YTTA saat ini berjalan di versi utama <strong class="text-white font-semibold">1.20.1 - 1.20.4</strong>. Kamu bisa menggunakan versi game di rentang tersebut untuk terhubung ke dalam game.
+                    <p class="mt-2 text-xs text-amber-400 flex items-center gap-1.5"><i class="fa-solid fa-triangle-exclamation"></i> Catatan: Pengguna Bedrock/HP disarankan selalu memperbarui aplikasi game ke versi resmi paling baru agar tidak terkena bug kegagalan login.</p>
+                </div>
+            </div>
+
+            <!-- ACCORDION NO 3: AKUN CRACKED -->
+            <div class="border border-white/5 rounded-xl overflow-hidden bg-enderDark/60 transition hover:border-enderPurple/30">
+                <button onclick="toggleAccordion(3)" class="w-full py-4 px-6 text-left font-bold text-base text-gray-200 hover:text-enderPurple flex justify-between items-center transition">
+                    <span>Apakah server ini mendukung pemain Cracked / Non-Premium?</span>
+                    <i id="accordion-icon-3" class="fa-solid fa-chevron-down text-sm transition-transform duration-300"></i>
+                </button>
+                <div id="accordion-content-3" class="hidden px-6 pb-5 text-sm text-gray-400 leading-relaxed border-t border-white/5 pt-3">
+                    <strong class="text-white font-semibold">Ya, server YTTA mendukung penuh akun Cracked!</strong> Pemain yang menggunakan launcher pihak ketiga seperti TLauncher di PC maupun PojavLauncher di Android bisa bergabung tanpa hambatan.
+                    <p class="mt-2 text-xs text-enderGlow flex items-center gap-1.5"><i class="fa-solid fa-key"></i> Jangan lupa gunakan perintah <code class="bg-black/50 border border-white/5 px-1.5 py-0.5 rounded text-white font-mono">/register &lt;password_kamu&gt; &lt;ulangi_password&gt;</code> saat pertama kali masuk agar akunmu terlindungi.</p>
+                </div>
+            </div>
+
+            <!-- ACCORDION NO 4: PROTEKSI GRIEFING (REDPROTECT VERSION) -->
+            <div class="border border-white/5 rounded-xl overflow-hidden bg-enderDark/60 transition hover:border-enderPurple/30">
+                <button onclick="toggleAccordion(4)" class="w-full py-4 px-6 text-left font-bold text-base text-gray-200 hover:text-enderPurple flex justify-between items-center transition">
+                    <span>Bagaimana cara melindungi area rumah agar tidak dihancurkan (Land Claim)?</span>
+                    <i id="accordion-icon-4" class="fa-solid fa-chevron-down text-sm transition-transform duration-300"></i>
+                </button>
+                <div id="accordion-content-4" class="hidden px-6 pb-6 text-sm text-gray-400 leading-relaxed border-t border-white/5 pt-4 flex flex-col gap-4">
+                    <p>Server YTTA menggunakan plugin <strong class="text-white font-semibold">RedProtect</strong> untuk mengamankan bangunan. Perlindungan ini otomatis mengunci area dari dasar batuan paling bawah (*bedrock*) hingga batas langit tertinggi. Kamu bisa memilih salah satu dari 2 cara mudah di bawah ini:</p>
+                    
+                    <!-- Cara 1: Pagar -->
+                    <div class="bg-black/20 p-4 rounded-xl border border-white/5">
+                        <h4 class="text-white font-bold mb-1.5 flex items-center gap-2 text-xs uppercase tracking-wider text-enderGlow">
+                            <i class="fa-solid fa-border-all"></i> Cara 1: Menggunakan Pagar (Metode Otomatis)
+                        </h4>
+                        <ol class="list-decimal pl-4 text-xs flex flex-col gap-1">
+                            <li>Kelilingi area rumah atau tanah milikmu menggunakan <span class="text-gray-200">Pagar (Fence)</span> jenis apa saja. Pastikan semua ujung pagar tersambung rapat membentuk kotak tanpa terputus.</li>
+                            <li>Tempelkan sebuah papan tanda <span class="text-gray-200">(Sign)</span> di salah satu tiang pagar tersebut.</li>
+                            <li>Tulis teks <code class="bg-black/40 px-1 py-0.5 rounded text-amber-400 font-mono font-bold">[rp]</code> pada baris pertama papan tanda, lalu tekan selesai. Papan akan otomatis memproses dan mengunci wilayah di dalam pagar.</li>
+                        </ol>
+                    </div>
+
+                    <!-- Cara 2: Wand -->
+                    <div class="bg-black/20 p-4 rounded-xl border border-white/5">
+                        <h4 class="text-white font-bold mb-1.5 flex items-center gap-2 text-xs uppercase tracking-wider text-enderGlow">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> Cara 2: Menggunakan Alat Seleksi (Wand)
+                        </h4>
+                        <ol class="list-decimal pl-4 text-xs flex flex-col gap-1">
+                            <li>Ketik perintah <code class="bg-black/40 px-1 py-0.5 rounded text-white font-mono">/rp wand</code> di kolom chat untuk mendapatkan alat penanda wilayah.</li>
+                            <li>Pergi ke sudut pojok kiri depan tanahmu, lalu <span class="text-gray-200 font-medium">Klik Kiri</span> pada blok lantai tersebut.</li>
+                            <li>Pergi ke sudut pojok kanan belakang secara diagonal, lalu <span class="text-gray-200 font-medium">Klik Kanan</span> pada blok lantai seberangnya.</li>
+                            <li>Kunci area tersebut dengan mengetik perintah chat: <code class="bg-black/40 px-1 py-0.5 rounded text-white font-mono">/rp claim [Nama_Klaim]</code> (Contoh: <span class="text-gray-300 font-mono">/rp claim rumahku</span>).</li>
+                        </ol>
+                    </div>
+
+                    <!-- Daftar Perintah Tambahan -->
+                    <div class="bg-enderPurple/5 p-4 rounded-xl border border-enderPurple/10">
+                        <h4 class="text-white font-bold mb-2 flex items-center gap-2 text-xs">
+                            <i class="fa-solid fa-terminal text-enderPurple"></i> Peraturan & Perintah Tambahan RedProtect:
+                        </h4>
+                        <ul class="flex flex-col gap-1.5 text-xs font-medium font-mono pl-1">
+                            <li><span class="text-enderGlow inline-block w-44">/rp addmember [Nama]</span> <span class="text-gray-400 font-sans">&rarr; Memberikan izin bangun/buka chest kepada teman.</span></li>
+                            <li><span class="text-enderGlow inline-block w-44">/rp removemember [Nama]</span> <span class="text-gray-400 font-sans">&rarr; Mencabut izin bangun milik teman.</span></li>
+                            <li><span class="text-enderGlow inline-block w-44">/rp info</span> <span class="text-gray-400 font-sans">&rarr; Melihat informasi pemilik dan batas wilayah klaim tempat kamu berdiri.</span></li>
+                            <li><span class="text-enderGlow inline-block w-44">/rp flag</span> <span class="text-gray-400 font-sans">&rarr; Membuka Menu Untuk Mengatur Permission </span></li>
+                             <li><span class="text-enderGlow inline-block w-44">/rp delete</span> <span class="text-gray-400 font-sans">&rarr; Menghapus klaim perlindungan tanah (jika ingin pindah lokasi).</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ACCORDION NO 5: SOLUSI LAG / ERROR CONNECT -->
+            <div class="border border-white/5 rounded-xl overflow-hidden bg-enderDark/60 transition hover:border-enderPurple/30">
+                <button onclick="toggleAccordion(5)" class="w-full py-4 px-6 text-left font-bold text-base text-gray-200 hover:text-enderPurple flex justify-between items-center transition">
+                    <span>Kenapa saya tidak bisa masuk ke server atau mengalami lag?</span>
+                    <i id="accordion-icon-5" class="fa-solid fa-chevron-down text-sm transition-transform duration-300"></i>
+                </button>
+                <div id="accordion-content-5" class="hidden px-6 pb-5 text-sm text-gray-400 leading-relaxed border-t border-white/5 pt-3 flex flex-col gap-2">
+                    <p>Ada beberapa kemungkinan umum yang menjadi penyebab masalah koneksi tersebut:</p>
+                    <ol class="list-decimal pl-5 text-xs flex flex-col gap-1.5">
+                        <li><strong class="text-gray-200">Server Maintenance:</strong> Silakan cek indikator status ketersediaan server di halaman depan web untuk memastikan server sedang online.</li>
+                        <li><strong class="text-gray-200">Kesalahan Port Bedrock:</strong> Pengguna HP sering lupa mengubah port bawaan. Pastikan kolom Port diisi angka <span class="text-amber-400 font-semibold">25830</span>, bukan port default 19132.</li>
+                        <li><strong class="text-gray-200">Masalah Jaringan:</strong> Server YTTA menggunakan infrastruktur hosting lokal Indonesia. Pastikan kestabilan ping internet provider kamu aman sebelum bermain.</li>
+                    </ol>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="w-full bg-black/80 border-t border-enderPurple/10 py-8 px-6 text-center text-xs text-gray-500">
+        <p class="font-semibold text-gray-400 mb-2">© 2026 YTTA Community. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleAccordion(id) {
+            const content = document.getElementById(`accordion-content-${id}`);
+            const icon = document.getElementById(`accordion-icon-${id}`);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+    </script>
+</body>
+</html>

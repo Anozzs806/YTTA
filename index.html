@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YTTA Minecraft Community Server - Home</title>
+    
+    <!-- LOGO UNTUK BAR / TAB WEBSITE (FAVICON) -->
+    <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/1WiP_0ooq72Y1FTJjHH0d-XgLAihA9Mtj">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        enderDark: '#06020c',
+                        enderCard: '#130924',
+                        enderPurple: '#a855f7',
+                        enderGlow: '#c084fc',
+                        discordBlurple: '#5865F2',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        grotesk: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #06020c; color: #ffffff; font-family: 'Poppins', sans-serif; overflow-x: hidden; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #06020c; }
+        ::-webkit-scrollbar-thumb { background: #1f113a; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a855f7; }
+        @keyframes glow { 0%, 100% { box-shadow: 0 0 15px rgba(168, 85, 247, 0.2); } 50% { box-shadow: 0 0 30px rgba(168, 85, 247, 0.5); } }
+        .glowing-card { animation: glow 4s infinite ease-in-out; }
+        
+        /* Style Animasi Banner Gallery Showcase */
+        @keyframes scrollGrid {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+        }
+        .animate-gallery-flow {
+            animation: scrollGrid 20s linear infinite;
+        }
+        .animate-gallery-flow:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <header class="sticky top-0 z-50 bg-enderDark/95 border-b border-enderPurple/20 backdrop-filter backdrop-blur-lg px-6 py-4 md:px-12 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-3 font-grotesk font-bold text-2xl tracking-wider text-white hover:opacity-90 transition">
+            <img src="https://lh3.googleusercontent.com/d/1WiP_0ooq72Y1FTJjHH0d-XgLAihA9Mtj" alt="YTTA Logo" class="w-10 h-10 rounded-lg border-2 border-enderPurple object-cover">
+            YTTA<span class="text-enderPurple">MC</span>
+        </a>
+        <nav class="hidden md:block">
+            <ul class="flex gap-8 font-semibold text-sm">
+                <li><a href="index.html" class="text-enderPurple font-bold">Home</a></li>
+                <li><a href="#pemerintah" class="hover:text-enderPurple transition">Pemerintah</a></li>
+                <li><a href="gallery/index.html" class="hover:text-enderPurple transition">Gallery</a></li>
+                <li><a href="faq/index.html" class="hover:text-enderPurple transition">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="flex-grow flex flex-col items-center py-8 px-4 md:px-12 max-w-6xl w-full mx-auto gap-12">
+        
+        <!-- SECTION HERO & SERVER IP -->
+        <section id="home" class="w-full relative overflow-hidden border-2 border-enderPurple/30 rounded-2xl py-16 px-6 md:py-24 md:px-12 glowing-card text-center flex flex-col gap-8 transition-all duration-500" style="background: linear-gradient(to bottom, rgba(13, 9, 36, 0.65), rgba(6, 2, 12, 0.98)), url('https://lh3.googleusercontent.com/d/1fFhSaBNdSR5X55wzZf_LexWcdVzneWwq') no-repeat center center/cover;">
+            <div class="relative z-10 flex flex-col gap-2">
+                <h2 class="font-grotesk font-bold text-4xl md:text-5xl tracking-widest text-white drop-shadow-[0_4px_12px_rgba(168,85,247,0.5)]">SERVER IP</h2>
+                <p class="text-sm md:text-base text-gray-300 max-w-xl mx-auto">Klik salah satu kartu di bawah ini untuk menyalin IP secara instan dan mulai petualanganmu sekarang!</p>
+                <div id="server-status" class="flex items-center justify-center gap-2 mt-2 bg-black/40 border border-white/10 px-4 py-1.5 rounded-full max-w-max mx-auto text-xs font-semibold">
+                    <span class="w-2.5 h-2.5 rounded-full bg-gray-500 animate-pulse" id="status-dot"></span>
+                    <span id="status-text" class="text-gray-400">Menghubungkan ke server...</span>
+                </div>
+            </div>
+            
+            <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto w-full">
+                <div onclick="copyToClipboard('mc.ytta.my.id', 'IP Java Server', this)" class="group relative bg-enderDark/75 backdrop-filter backdrop-blur-md hover:bg-enderDark/90 border-2 border-enderPurple/20 hover:border-enderPurple p-8 rounded-2xl cursor-pointer transition-all duration-300 transform hover:-translate-y-2 shadow-xl hover:shadow-enderPurple/20">
+                    <div class="absolute top-4 right-4 text-enderPurple/40 group-hover:text-enderPurple transition-all duration-300">
+                        <i class="fa-regular fa-copy text-xl copy-icon"></i>
+                        <i class="fa-solid fa-check text-xl check-icon hidden text-emerald-400"></i>
+                    </div>
+                    <div class="flex items-center gap-4 mb-3">
+                        <div class="w-12 h-12 rounded-lg bg-enderPurple/10 flex items-center justify-center text-enderPurple text-xl">
+                            <i class="fa-solid fa-desktop"></i>
+                        </div>
+                        <div class="text-left">
+                            <span class="block text-xs uppercase text-gray-400 font-bold tracking-wider">Java Edition</span>
+                            <span class="text-xl md:text-2xl font-grotesk font-bold text-white tracking-wide">mc.ytta.my.id</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div onclick="copyToClipboard('mc.ytta.my.id:25830', 'IP Bedrock & Port', this)" class="group relative bg-enderDark/75 backdrop-filter backdrop-blur-md hover:bg-enderDark/90 border-2 border-enderPurple/20 hover:border-enderPurple p-8 rounded-2xl cursor-pointer transition-all duration-300 transform hover:-translate-y-2 shadow-xl hover:shadow-enderPurple/20">
+                    <div class="absolute top-4 right-4 text-enderPurple/40 group-hover:text-enderPurple transition-all duration-300">
+                        <i class="fa-regular fa-copy text-xl copy-icon"></i>
+                        <i class="fa-solid fa-check text-xl check-icon hidden text-emerald-400"></i>
+                    </div>
+                    <div class="flex items-center gap-4 mb-3">
+                        <div class="w-12 h-12 rounded-lg bg-enderPurple/10 flex items-center justify-center text-enderPurple text-xl">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+                        <div class="text-left">
+                            <span class="block text-xs uppercase text-gray-400 font-bold tracking-wider">Bedrock Edition</span>
+                            <span class="text-xl md:text-2xl font-grotesk font-bold text-white tracking-wide">mc.ytta.my.id:25830</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="relative z-10 text-xs text-enderPurple/80 font-bold tracking-wider uppercase bg-enderDark/40 px-4 py-2 rounded-full max-w-max mx-auto border border-enderPurple/10">VERSION 26.1.2</p>
+        </section>
+
+        <!-- SECTION PEMERINTAH -->
+        <section id="pemerintah" class="w-full bg-enderCard/40 border border-enderPurple/10 rounded-2xl p-8 flex flex-col items-center gap-8">
+            <div class="text-center">
+                <h2 class="font-grotesk font-bold text-3xl tracking-wide uppercase">Struktur Pemerintah</h2>
+                <div class="h-1 w-24 bg-enderPurple mx-auto mt-2 rounded"></div>
+            </div>
+
+            <div class="w-full flex flex-col items-center gap-12">
+                <div class="flex flex-col items-center text-center">
+                    <div class="relative group">
+                        <div class="absolute left-1/2 bottom-[-48px] w-0.5 h-12 bg-enderPurple/30 -translate-x-1/2 hidden md:block"></div>
+                        <div class="bg-enderDark/90 border-2 border-enderPurple p-4 rounded-xl flex flex-col items-center gap-3 w-40 transition transform hover:scale-105 shadow-lg shadow-enderPurple/10">
+                            <div class="w-20 h-20 bg-enderCard rounded-lg overflow-hidden border border-enderPurple/30">
+                                <img src="https://lh3.googleusercontent.com/d/1gGAJ-CoFWBIXS_d-SQdeZavlk-L2Rjp2" alt="Anozzs" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/100x100/140d24/a855f7?text=Anozzs'">
+                            </div>
+                            <span class="font-grotesk font-bold text-white">Anozzs</span>
+                            <span class="text-[10px] bg-enderPurple/20 text-enderPurple px-3 py-1 rounded-full uppercase font-bold tracking-wider">PEMDA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative w-4/5 h-0.5 bg-enderPurple/30 -mt-6 mb-2 hidden md:block"></div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 w-full justify-items-center">
+                    <div class="bg-enderDark/80 border border-enderPurple/20 p-4 rounded-xl flex flex-col items-center gap-3 w-36 transition transform hover:scale-105 hover:border-enderPurple/60">
+                        <div class="w-16 h-16 bg-enderCard rounded-lg overflow-hidden border border-enderPurple/30">
+                            <img src="https://lh3.googleusercontent.com/d/1l_NLCW87R6Fstb2s464dGhoFxGCZ3ikK" alt="Shiroku" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/100x100/140d24/a855f7?text=Shiroku'">
+                        </div>
+                        <span class="font-grotesk font-bold text-sm text-gray-200">ShirokuHimatsu</span>
+                        <span class="text-[9px] bg-white/5 text-gray-400 px-2.5 py-0.5 rounded-full uppercase font-semibold">RT</span>
+                    </div>
+
+                    <div class="bg-enderDark/80 border border-enderPurple/20 p-4 rounded-xl flex flex-col items-center gap-3 w-36 transition transform hover:scale-105 hover:border-enderPurple/60">
+                        <div class="w-16 h-16 bg-enderCard rounded-lg overflow-hidden border border-enderPurple/30">
+                            <img src="https://lh3.googleusercontent.com/d/1Fh4M7D8ltcSSVTSjbRSCW52g5w83oNlL" alt="DrMurphy30" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/100x100/140d24/a855f7?text=DrMurphy30'">
+                        </div>
+                        <span class="font-grotesk font-bold text-sm text-gray-200">DrMurphy30</span>
+                        <span class="text-[9px] bg-white/5 text-gray-400 px-2.5 py-0.5 rounded-full uppercase font-semibold">KADES</span>
+                    </div>
+
+                    <div class="bg-enderDark/80 border border-enderPurple/20 p-4 rounded-xl flex flex-col items-center gap-3 w-36 transition transform hover:scale-105 hover:border-enderPurple/60">
+                        <div class="w-16 h-16 bg-enderCard rounded-lg overflow-hidden border border-enderPurple/30">
+                            <img src="https://lh3.googleusercontent.com/d/1faMhY1b1QSwoStIvn84iMmUc-5S8-5qq" alt="YantoTambalBan" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/100x100/140d24/a855f7?text=YeetPotata'">
+                        </div>
+                        <span class="font-grotesk font-bold text-sm text-gray-200">YantoTambalBan</span>
+                        <span class="text-[9px] bg-white/5 text-gray-400 px-2.5 py-0.5 rounded-full uppercase font-semibold">SATPOL</span>
+                    </div>
+
+                    <div class="bg-enderDark/80 border border-enderPurple/20 p-4 rounded-xl flex flex-col items-center gap-3 w-36 transition transform hover:scale-105 hover:border-enderPurple/60">
+                        <div class="w-16 h-16 bg-enderCard rounded-lg overflow-hidden border border-enderPurple/30">
+                            <img src="https://lh3.googleusercontent.com/d/1RmsD2e8pCEQvd90Ym-F_uYF408Hhpkm4" alt="ZED311" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/100x100/140d24/a855f7?text=Xenon'">
+                        </div>
+                        <span class="font-grotesk font-bold text-sm text-gray-200">ZED311</span>
+                        <span class="text-[9px] bg-white/5 text-gray-400 px-2.5 py-0.5 rounded-full uppercase font-semibold">SATPOL</span>
+                    </div>
+
+                    <div class="bg-enderDark/80 border border-enderPurple/20 p-4 rounded-xl flex flex-col items-center gap-3 w-36 transition transform hover:scale-105 hover:border-enderPurple/60">
+                        <div class="w-16 h-16 bg-enderCard rounded-lg overflow-hidden border border-enderPurple/30">
+                            <img src="https://lh3.googleusercontent.com/d/1thSevsAH560Qec0xgsHx4bDXw1kN5T2I" alt="Ipandora" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/100x100/140d24/a855f7?text=Valkyrie'">
+                        </div>
+                        <span class="font-grotesk font-bold text-sm text-gray-200">Ipandora</span>
+                        <span class="text-[9px] bg-white/5 text-gray-400 px-2.5 py-0.5 rounded-full uppercase font-semibold">RT (Retired)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION BANNER GALLERY ANIMASI MODERN -->
+        <section class="w-full py-4">
+            <a href="gallery/index.html" class="group relative block w-full h-48 md:h-56 rounded-2xl overflow-hidden border border-enderPurple/30 hover:border-enderPurple transition-all duration-500 shadow-xl hover:shadow-enderPurple/20 bg-enderCard">
+                
+                <!-- Background Grid Gambar yang Bergerak Mengalir Otomatis -->
+                <div class="absolute inset-0 grid grid-cols-4 gap-2 p-2 opacity-30 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700 pointer-events-none overflow-hidden">
+                    <!-- Kolom 1 -->
+                    <div class="flex flex-col gap-2 animate-gallery-flow">
+                        <img src="https://lh3.googleusercontent.com/d/131Wzzctak_AOgls3PaLaNRRBiWqr3vX1=w200" class="w-full h-24 object-cover rounded-lg">
+                        <img src="https://lh3.googleusercontent.com/d/1N9dSlOUSDO4V3mKaFgCbLJks582L1qZm=w200" class="w-full h-24 object-cover rounded-lg">
+                        <img src="https://lh3.googleusercontent.com/d/1KaaLkCrmPpVIzsyVBXHFMgb4fogc0NtS=w200" class="w-full h-24 object-cover rounded-lg">
+                        <img src="https://lh3.googleusercontent.com/d/131Wzzctak_AOgls3PaLaNRRBiWqr3vX1=w200" class="w-full h-24 object-cover rounded-lg">
+                        <img src="https://lh3.googleusercontent.com/d/1N9dSlOUSDO4V3mKaFgCbLJks582L1qZm=w200" class="w-full h-24 object-cover rounded-lg">
+                    </div>
+                    <!-- Kolom 2 -->
+                    <div class="flex flex-col gap-2 animate-gallery-flow" style="animation-duration: 25s; animation-direction: reverse;">
+                        <img src="https://lh3.googleusercontent.com/d/1ob75fODAE46V__qybK3hv-ui3iLllKYZ=w200" class="w-full h-24 object-cover rounded-lg">
+                        <img src="https://lh3.googleusercontent.com/d/1r4x_OJlFgYjRefACpMTinHI8_hDx7859=w200" class="w-full h-24 object-cover rounded-lg">
+                        <img src="https://lh3.googleusercontent.com/d/1botbIa-vIdBCxil4qgnx2SmiM5DDRodn=w200" class="w-full h-24 object-cover rounded-lg">
+                        <img src="https://lh3.googleusercontent.com/d/1ob75fODAE46V__qybK3hv-ui3iLllKYZ=w200" class="w-full h-24 object-cover rounded-lg">
+                        <img src="https://lh3.googleusercontent.com/d/1r4x_OJlFgYjRefACpMTinHI8_hDx7859=w200" class="w-full h-24 object-cover rounded-lg">
+                    </div>
+                    <!-- Kolom 3 -->
+                    <div class="flex flex-col gap-2 animate-gallery-flow" style="animation-duration: 18s;">
+                        <img src="https://lh3.googleusercontent.com/d/1u4knXe_Jjw5FkGwxKNIDAqlje8tezXFR=w200" class="w-full h-24 object-cover rounded-lg">
+                        <img src="https://lh3.googleusercontent.com/d/1KaaLkCrmPpVIzsyVBXHFMgb4fogc0NtS=w200" class="w-full h-24 object-cover rounded-lg">
+                        <img src="https://lh3.googleusercontent.com/d/131Wzzctak_AOgls3PaLaNRRBiWqr3vX1=w200" class="w-full h-24 object-cover rounded-lg">
+                        <img src="https://lh3.googleusercontent.com/d/1u4knXe_Jjw5FkGwxKNIDAqlje8tezXFR=w200" class="w-full h-24 object-cover rounded-lg">
+                        <img src="https://lh3.googleusercontent.com/d/1KaaLkCrmPpVIzsyVBXHFMgb4fogc0NtS=w200" class="w-full h-24 object-cover rounded-lg">
+                    </div>
+                    <!-- Kolom 4 -->
+                    <div class="flex flex-col gap-2 animate-gallery-flow" style="animation-duration: 22s; animation-direction: reverse;">
+                        <img src="https://lh3.googleusercontent.com/d/1N9dSlOUSDO4V3mKaFgCbLJks582L1qZm=w200" class="w-full h-24 object-cover rounded-lg">
+                        <img src="https://lh3.googleusercontent.com/d/1ob75fODAE46V__qybK3hv-ui3iLllKYZ=w200" class="w-full h-24 object-cover rounded-lg">
+                        <img src="https://lh3.googleusercontent.com/d/1r4x_OJlFgYjRefACpMTinHI8_hDx7859=w200" class="w-full h-24 object-cover rounded-lg">
+                        <img src="https://lh3.googleusercontent.com/d/1N9dSlOUSDO4V3mKaFgCbLJks582L1qZm=w200" class="w-full h-24 object-cover rounded-lg">
+                        <img src="https://lh3.googleusercontent.com/d/1ob75fODAE46V__qybK3hv-ui3iLllKYZ=w200" class="w-full h-24 object-cover rounded-lg">
+                    </div>
+                </div>
+
+                <!-- Efek Vignette Gradasi Gelap (Agar Teks Tetap Mudah Dibaca) -->
+                <div class="absolute inset-0 bg-gradient-to-r from-enderDark via-enderDark/80 to-enderDark/40 md:from-enderDark md:via-enderDark/70 md:to-transparent z-10"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-enderDark via-transparent to-transparent z-10"></div>
+
+                <!-- Konten Teks Utama di Bagian Depan -->
+                <div class="absolute inset-0 z-20 flex flex-col md:flex-row justify-between items-center px-6 md:px-12 py-6 text-center md:text-left gap-4">
+                    <div class="flex flex-col gap-1">
+                        <h3 class="font-grotesk font-black text-2xl md:text-3xl tracking-wider text-white group-hover:text-enderGlow transition duration-300 flex items-center justify-center md:justify-start gap-3">
+                            <i class="fa-solid fa-images text-enderPurple group-hover:animate-bounce"></i> 
+                            EXPLORE GALLERY YTTA
+                        </h3>
+                        <p class="text-xs md:text-sm text-gray-400 max-w-md">Lihat dokumentasi, keindahan arsitektur kota, dan mahakarya proyek bangunan yang dibuat oleh para player komunitas.</p>
+                    </div>
+                    
+                    <!-- Tombol Aksi Kanan -->
+                    <div class="px-5 py-2.5 bg-enderPurple/10 border border-enderPurple/40 group-hover:bg-enderPurple group-hover:text-white rounded-xl text-enderGlow text-xs md:text-sm font-bold tracking-wide transition-all duration-300 whitespace-nowrap shadow-md group-hover:shadow-enderPurple/50 flex items-center gap-2">
+                        Buka Folder Dokumentasi <i class="fa-solid fa-arrow-right group-hover:translate-x-1.5 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+        </section>
+
+        <!-- SECTION COMMUNITY HUB & PERATURAN -->
+        <section id="community" class="w-full bg-enderCard/40 border border-enderPurple/10 rounded-2xl p-8 flex flex-col gap-8">
+            <div class="text-center">
+                <h2 class="font-grotesk font-bold text-3xl tracking-wide uppercase">Community Hub</h2>
+                <div class="h-1 w-24 bg-enderPurple mx-auto mt-2 rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full items-stretch">
+                <div class="bg-enderDark/80 border border-discordBlurple/30 hover:border-discordBlurple/70 p-6 rounded-xl flex flex-col justify-between transition duration-300 shadow-lg shadow-discordBlurple/5">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-brands fa-discord text-4xl text-discordBlurple"></i>
+                                <div>
+                                    <h3 class="font-grotesk font-bold text-lg text-white">Discord Official</h3>
+                                    <span class="text-xs text-gray-400 uppercase tracking-wider font-semibold">YTTA Community Hub</span>
+                                </div>
+                            </div>
+                            <span class="bg-emerald-500/10 text-emerald-400 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider flex items-center gap-1.5">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Online
+                            </span>
+                        </div>
+                        <p class="text-sm text-gray-300 leading-relaxed mb-6">
+                            Join Server Discord Resmi YTTA Untuk Membagikan Hasil Building Kalian, Sertakan Koordinat, Judul Dan Deskripsi, Dengan Ini Dapat Memerkan Kota YTTA Hasil Kerja Keras Para Player.
+                        </p>
+                    </div>
+                    
+                    <a href="https://discord.gg/sbfn4sSze9" target="_blank" class="w-full py-3.5 bg-discordBlurple hover:bg-[#4752c4] text-white font-bold rounded-lg text-center transition flex items-center justify-center gap-2 shadow-lg shadow-discordBlurple/20">
+                        <i class="fa-brands fa-discord"></i> Join Discord Server
+                    </a>
+                </div>
+
+                <div class="bg-enderDark/80 border border-enderPurple/20 p-6 rounded-xl flex flex-col justify-between">
+                    <h3 class="font-grotesk font-bold text-lg text-white mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-scale-balanced text-enderPurple"></i> Peraturan Utama Server
+                    </h3>
+                    
+                    <div class="flex flex-col gap-3 flex-grow">
+                        <div class="border border-white/5 rounded-lg overflow-hidden bg-enderCard/20">
+                            <button onclick="toggleAccordion(1)" class="w-full py-2.5 px-4 text-left font-bold text-sm text-gray-200 hover:text-enderPurple flex justify-between items-center transition">
+                                <span>1. Dilarang Griefing & Stealing</span>
+                                <i id="accordion-icon-1" class="fa-solid fa-chevron-down text-xs transition-transform"></i>
+                            </button>
+                            <div id="accordion-content-1" class="hidden px-4 pb-3 text-xs text-gray-400 leading-relaxed">
+                                Menghancurkan, memodifikasi, atau mengambil barang milik player lain tanpa izin di luar area klaim pribadi sangat dilarang keras dan akan dikenai sanksi Ban permanen.
+                            </div>
+                        </div>
+
+                        <div class="border border-white/5 rounded-lg overflow-hidden bg-enderCard/20">
+                            <button onclick="toggleAccordion(2)" class="w-full py-2.5 px-4 text-left font-bold text-sm text-gray-200 hover:text-enderPurple flex justify-between items-center transition">
+                                <span>2. No Cheating & Exploit Hacking</span>
+                                <i id="accordion-icon-2" class="fa-solid fa-chevron-down text-xs transition-transform"></i>
+                            </button>
+                            <div id="accordion-content-2" class="hidden px-4 pb-3 text-xs text-gray-400 leading-relaxed">
+                                Dilarang menggunakan client ilegal, X-Ray, modifikasi yang memberikan keuntungan tidak adil, atau memanfaatkan bug server untuk duplikasi item.
+                            </div>
+                        </div>
+
+                        <div class="border border-white/5 rounded-lg overflow-hidden bg-enderCard/20">
+                            <button onclick="toggleAccordion(3)" class="w-full py-2.5 px-4 text-left font-bold text-sm text-gray-200 hover:text-enderPurple flex justify-between items-center transition">
+                                <span>3. Hormati Sesama Player</span>
+                                <i id="accordion-icon-3" class="fa-solid fa-chevron-down text-xs transition-transform"></i>
+                            </button>
+                            <div id="accordion-content-3" class="hidden px-4 pb-3 text-xs text-gray-400 leading-relaxed">
+                                Jaga ketertiban chat global di server maupun Discord. Hindari berkata kasar, rasis, bernuansa SARA, atau melakukan spamming secara berlebih.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="toastAlert" class="fixed bottom-[-100px] left-1/2 -translate-x-1/2 z-[3000] bg-enderPurple hover:bg-purple-600 px-6 py-3 rounded-full text-sm font-bold text-white shadow-2xl transition-all duration-500 flex items-center gap-2">
+        <i class="fa-solid fa-circle-check"></i> <span id="toastMessage">IP Berhasil disalin!</span>
+    </div>
+
+    <footer class="w-full bg-black/80 border-t border-enderPurple/10 py-8 px-6 text-center text-xs text-gray-500">
+        <p class="font-semibold text-gray-400 mb-2">© 2026 YTTA Community. All rights reserved.</p>
+        <p>Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.</p>
+    </footer>
+
+    <script>
+        window.onload = function() { fetchServerStatus(); };
+
+        function fetchServerStatus() {
+            const statusText = document.getElementById("status-text");
+            const statusDot = document.getElementById("status-dot");
+            fetch("https://api.mcsrvstat.us/3/mc.ytta.my.id")
+                .then(response => response.json())
+                .then(data => {
+                    if (data.online === true) {
+                        statusDot.className = "w-2.5 h-2.5 rounded-full bg-emerald-500";
+                        statusText.innerText = `Online | ${data.players?.online ?? 0}/${data.players?.max ?? "?"} Players`;
+                        statusText.className = "text-emerald-400 text-xs font-semibold";
+                    } else { setServerOffline(); }
+                }).catch(() => setServerOffline());
+        }
+
+        function setServerOffline() {
+            document.getElementById("status-dot").className = "w-2.5 h-2.5 rounded-full bg-rose-500";
+            document.getElementById("status-text").innerText = "Offline | Hubungi Staff";
+            document.getElementById("status-text").className = "text-rose-400 text-xs font-semibold";
+        }
+
+        function copyToClipboard(textToCopy, label, cardElement) {
+            const copyIcon = cardElement.querySelector('.copy-icon');
+            const checkIcon = cardElement.querySelector('.check-icon');
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                showToast(`${label} disalin ke clipboard!`);
+                if (copyIcon && checkIcon) {
+                    copyIcon.classList.add('hidden'); checkIcon.classList.remove('hidden');
+                    setTimeout(() => { copyIcon.classList.remove('hidden'); checkIcon.classList.add('hidden'); }, 2000);
+                }
+            });
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById("toastAlert");
+            document.getElementById("toastMessage").innerText = message;
+            toast.classList.replace("bottom-[-100px]", "bottom-10");
+            setTimeout(() => { toast.classList.replace("bottom-10", "bottom-[-100px]"); }, 3000);
+        }
+
+        function toggleAccordion(id) {
+            const content = document.getElementById(`accordion-content-${id}`);
+            const icon = document.getElementById(`accordion-icon-${id}`);
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+    </script>
+</body>
+</html>
