@@ -48,9 +48,9 @@ const playersData = {
         skin: "DrMurphy30",
         photos: [
             { url: "https://lh3.googleusercontent.com/d/1ujerqZ0ZbPtRMPnWoSIMEgBGEz5XJgfp", label: "Fire Watch", desc: "Tempat Tinggal Bapak Kades" },
-            { url: "https://lh3.googleusercontent.com/d/1nE-5m4KIUtaAaC7VCc65WL6UgBlMYOf6", label: "Fountain of Serenity", desc: "Tempat Spawn Player Diindahkan Air Mancur." },
+            { url: "https://lh3.googleusercontent.com/d/1aGsjhHHPbzxYJshVSBauB_0B_cSfpH7x", label: "Fountain of Serenity", desc: "Tempat Spawn Player Diindahkan Air Mancur." },
             { url: "https://lh3.googleusercontent.com/d/1e7o7FQ5lgDOYRraO5_VEXDK1lMBkjgJn", label: "Trading Village", desc: "All In One Trading Villager" },
-            { url: "https://lh3.googleusercontent.com/d/1Q8rRgBwJFbVDnsr45xgfO7oOMQQPZECX", label: "Gazebo", desc: "Tempat Rilexs Anjay." },
+            { url: "https://lh3.googleusercontent.com/d/1lZTIEpyauGnTtrkcNj6oMUCifAVVn03q", label: "Gazebo", desc: "Tempat Rilexs Anjay." },
             { url: "", label: "Coming Soon", desc: "" },
             { url: "", label: "Coming Soon", desc: "" }
         ]
