@@ -29,6 +29,19 @@
             }
         }
     </script>
+    <script>
+    // Memastikan skrip berjalan setelah halaman dimuat
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    });
+</script>
     <style>
         body { background-color: #06020c; color: #ffffff; font-family: 'Poppins', sans-serif; overflow-x: hidden; }
         ::-webkit-scrollbar { width: 8px; }
@@ -64,14 +77,18 @@
             <img src="https://lh3.googleusercontent.com/d/1WiP_0ooq72Y1FTJjHH0d-XgLAihA9Mtj" alt="YTTA Logo" class="w-10 h-10 rounded-lg border-2 border-enderPurple object-cover">
             YTTA<span class="text-enderPurple">MC</span>
         </a>
-        <nav class="hidden md:block">
-            <ul class="flex gap-8 font-semibold text-sm">
-                <li><a href="./" class="text-enderPurple font-bold">Home</a></li>
-                <li><a href="#pemerintah" class="hover:text-enderPurple transition">Pemerintah</a></li>
-                <li><a href="gallery/" class="hover:text-enderPurple transition">Gallery</a></li>
-                <li><a href="faq/" class="hover:text-enderPurple transition">FAQ</a></li>
-            </ul>
-        </nav>
+       <button id="mobile-menu-btn" class="md:hidden text-white text-2xl">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
+<nav id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-enderDark/95 p-6 md:static md:block md:w-auto md:bg-transparent md:p-0">
+    <ul class="flex flex-col md:flex-row gap-6 md:gap-8 font-semibold text-sm">
+        <li><a href="./" class="text-enderPurple font-bold">Home</a></li>
+        <li><a href="#pemerintah" class="hover:text-enderPurple transition">Pemerintah</a></li>
+        <li><a href="gallery/" class="hover:text-enderPurple transition">Gallery</a></li>
+        <li><a href="faq/" class="hover:text-enderPurple transition">FAQ</a></li>
+    </ul>
+</nav>
     </header>
 
     <main class="flex-grow flex flex-col items-center py-8 px-4 md:px-12 max-w-6xl w-full mx-auto gap-12">
