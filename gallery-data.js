@@ -35,8 +35,8 @@ const playersData = {
         skin: "TakeAll",
         photos: [
             { url: "https://lh3.googleusercontent.com/d/1IpQE8TXrwhMXqnPu1DbrF-y-O8b0GiP7", label: "Patung Monumen", desc: "Angel" },
-            { url: "https://lh3.googleusercontent.com/d/1PcF4sQmrgma_4Q2TJtap8Ir6Xmj28Ipe", label: "Serenity Pond", desc: "A peaceful little pond where players can rest, fish, and enjoy the scenery." },
-            { url: "", label: "Coming Soon", desc: "" },
+            { url: "https://lh3.googleusercontent.com/d/1PVsxPLD7gqUo4rYZSKlhmx_UPoaXarUq", label: "Serenity Pond", desc: "A peaceful little pond where players can rest, fish, and enjoy the scenery." },
+            { url: "https://lh3.googleusercontent.com/d/1pomTK7QyCu_MXOmDcH_Hod8ZPsnrKlYI", label: "Rumah Makan Padang", desc: "Restaurant Padang" },
             { url: "", label: "Coming Soon", desc: "" },
             { url: "", label: "Coming Soon", desc: "" },
             { url: "", label: "Coming Soon", desc: "" }
@@ -74,7 +74,7 @@ const playersData = {
         skin: "Steve",
         photos: [
             { url: "https://lh3.googleusercontent.com/d/131Wzzctak_AOgls3PaLaNRRBiWqr3vX1", label: "Conference Room", desc: "Tempat Warga Musyawarah dan Pengadilan Rapat" },
-            { url: "https://lh3.googleusercontent.com/d/1F24vcN9Yyu7zhvhdF5EQXgFQjxFwHml1", label: "Secret House", desc: "Rumah Tempat Tinggal Knhuwy6" },
+            { url: "https://lh3.googleusercontent.com/d/1l91GkH9P9LsfviFrsuC7UvvwFCDyZf73", label: "Secret House", desc: "Rumah Tempat Tinggal Knhuwy6" },
             { url: "", label: "Coming Soon", desc: "" },
             { url: "", label: "Coming Soon", desc: "" },
             { url: "", label: "Coming Soon", desc: "" },
@@ -113,7 +113,7 @@ const playersData = {
         skin: "Steve",
         photos: [
             { url: "https://lh3.googleusercontent.com/d/1OtSwyrEmaPRRfb1Rx39tjBjVCa5oRMqc", label: "Rumah RAY", desc: "Tempat Tinggal Ray" },
-            { url: "https://lh3.googleusercontent.com/d/1SdBnKJAQItgQDUDC6zXRJRMbbMv_BKP3", label: "KitaNet", desc: "Mabar Kuy YAHAHAHA" },
+            { url: "https://lh3.googleusercontent.com/d/1wN1RD5SgfoM1Bl8k2vhKJVk1Mm29Fwgg", label: "KitaNet", desc: "Mabar Kuy YAHAHAHA" },
             { url: "", label: "Coming Soon", desc: "" },
             { url: "", label: "Coming Soon", desc: "" },
             { url: "", label: "Coming Soon", desc: "" },
