@@ -74,7 +74,7 @@ const playersData = {
         skin: "Steve",
         photos: [
             { url: "https://lh3.googleusercontent.com/d/131Wzzctak_AOgls3PaLaNRRBiWqr3vX1", label: "Conference Room", desc: "Tempat Warga Musyawarah dan Pengadilan Rapat" },
-            { url: "https://drive.google.com/file/d/1F24vcN9Yyu7zhvhdF5EQXgFQjxFwHml1/view?usp=drive_link", label: "Secret House", desc: "Rumah Tempat Tinggal Knhuwy6" },
+            { url: "https://lh3.googleusercontent.com/d/1F24vcN9Yyu7zhvhdF5EQXgFQjxFwHml1", label: "Secret House", desc: "Rumah Tempat Tinggal Knhuwy6" },
             { url: "", label: "Coming Soon", desc: "" },
             { url: "", label: "Coming Soon", desc: "" },
             { url: "", label: "Coming Soon", desc: "" },
