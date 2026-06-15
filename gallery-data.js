@@ -35,7 +35,7 @@ const playersData = {
         skin: "TakeAll",
         photos: [
             { url: "https://lh3.googleusercontent.com/d/1IpQE8TXrwhMXqnPu1DbrF-y-O8b0GiP7", label: "Patung Monumen", desc: "Angel" },
-            { url: "", label: "Coming Soon", desc: "" },
+            { url: "https://lh3.googleusercontent.com/d/1PcF4sQmrgma_4Q2TJtap8Ir6Xmj28Ipe", label: "Serenity Pond, desc: "A small and peaceful pond where visitors can relax and enjoy the beauty of nature." },
             { url: "", label: "Coming Soon", desc: "" },
             { url: "", label: "Coming Soon", desc: "" },
             { url: "", label: "Coming Soon", desc: "" },
@@ -74,7 +74,7 @@ const playersData = {
         skin: "Steve",
         photos: [
             { url: "https://lh3.googleusercontent.com/d/131Wzzctak_AOgls3PaLaNRRBiWqr3vX1", label: "Conference Room", desc: "Tempat Warga Musyawarah dan Pengadilan Rapat" },
-            { url: "", label: "Coming Soon", desc: "" },
+            { url: "https://drive.google.com/file/d/1F24vcN9Yyu7zhvhdF5EQXgFQjxFwHml1/view?usp=drive_link", label: "Secret House", desc: "Rumah Tempat Tinggal Knhuwy6" },
             { url: "", label: "Coming Soon", desc: "" },
             { url: "", label: "Coming Soon", desc: "" },
             { url: "", label: "Coming Soon", desc: "" },
@@ -113,7 +113,7 @@ const playersData = {
         skin: "Steve",
         photos: [
             { url: "https://lh3.googleusercontent.com/d/1OtSwyrEmaPRRfb1Rx39tjBjVCa5oRMqc", label: "Rumah RAY", desc: "Tempat Tinggal Ray" },
-            { url: "", label: "Coming Soon", desc: "" },
+            { url: "https://lh3.googleusercontent.com/d/1SdBnKJAQItgQDUDC6zXRJRMbbMv_BKP3", label: "KitaNet", desc: "Mabar Kuy YAHAHAHA" },
             { url: "", label: "Coming Soon", desc: "" },
             { url: "", label: "Coming Soon", desc: "" },
             { url: "", label: "Coming Soon", desc: "" },
