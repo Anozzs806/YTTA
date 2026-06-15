@@ -35,7 +35,7 @@ const playersData = {
         skin: "TakeAll",
         photos: [
             { url: "https://lh3.googleusercontent.com/d/1IpQE8TXrwhMXqnPu1DbrF-y-O8b0GiP7", label: "Patung Monumen", desc: "Angel" },
-            { url: "https://lh3.googleusercontent.com/d/1PcF4sQmrgma_4Q2TJtap8Ir6Xmj28Ipe", label: "Serenity Pond, desc: "A small and peaceful pond where visitors can relax and enjoy the beauty of nature." },
+            { url: "https://lh3.googleusercontent.com/d/1PcF4sQmrgma_4Q2TJtap8Ir6Xmj28Ipe", label: "Serenity Pond", desc: "A peaceful little pond where players can rest, fish, and enjoy the scenery." },
             { url: "", label: "Coming Soon", desc: "" },
             { url: "", label: "Coming Soon", desc: "" },
             { url: "", label: "Coming Soon", desc: "" },
