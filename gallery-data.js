@@ -51,7 +51,7 @@ const playersData = {
             { url: "https://lh3.googleusercontent.com/d/1aGsjhHHPbzxYJshVSBauB_0B_cSfpH7x", label: "Fountain of Serenity", desc: "Tempat Spawn Player Diindahkan Air Mancur." },
             { url: "https://lh3.googleusercontent.com/d/1e7o7FQ5lgDOYRraO5_VEXDK1lMBkjgJn", label: "Trading Village", desc: "All In One Trading Villager" },
             { url: "https://lh3.googleusercontent.com/d/1lZTIEpyauGnTtrkcNj6oMUCifAVVn03q", label: "Gazebo", desc: "Tempat Rilexs Anjay." },
-            { url: "", label: "Coming Soon", desc: "" },
+            { url: "https://lh3.googleusercontent.com/d/1aGsjhHHPbzxYJshVSBauB_0B_cSfpH7x", label: "Pond of Silent", desc: "Just listen to the Firefly" },
             { url: "", label: "Coming Soon", desc: "" }
         ]
     },
