@@ -94,16 +94,6 @@
     <main class="flex-grow flex flex-col items-center py-8 px-4 md:px-12 max-w-6xl w-full mx-auto gap-12">
         
         <section id="home" class="w-full relative overflow-hidden border-2 border-enderPurple/30 rounded-2xl py-16 px-6 md:py-24 md:px-12 glowing-card text-center flex flex-col gap-8 transition-all duration-500" style="background: linear-gradient(to bottom, rgba(13, 9, 36, 0.65), rgba(6, 2, 12, 0.98)), url('https://lh3.googleusercontent.com/d/1fFhSaBNdSR5X55wzZf_LexWcdVzneWwq') no-repeat center center/cover;">
-            <div class="grid grid-cols-2 gap-4 mt-4 w-full max-w-sm mx-auto">
-    <div class="bg-black/20 border border-white/5 p-2 rounded-lg text-center">
-        <span class="block text-[10px] text-gray-500 uppercase">CPU Load</span>
-        <span id="cpu-load" class="text-xs font-bold text-enderGlow">178.67% / 250%</span>
-    </div>
-    <div class="bg-black/20 border border-white/5 p-2 rounded-lg text-center">
-        <span class="block text-[10px] text-gray-500 uppercase">Memory</span>
-        <span id="mem-usage" class="text-xs font-bold text-enderGlow">3.04 GiB / 6 GiB</span>
-    </div>
-</div>
             <div class="relative z-10 flex flex-col gap-2">
                 <h2 class="font-grotesk font-bold text-4xl md:text-5xl tracking-widest text-white drop-shadow-[0_4px_12px_rgba(168,85,247,0.5)]">SERVER IP</h2>
                 <p class="text-sm md:text-base text-gray-300 max-w-xl mx-auto">Klik salah satu kartu di bawah ini untuk menyalin IP secara instan dan mulai petualanganmu sekarang!</p>
@@ -352,27 +342,18 @@
         }
 
         function fetchServerStatus() {
-    const statusText = document.getElementById("status-text");
-    const statusDot = document.getElementById("status-dot");
-    
-    // Asumsi: Jika Anda memiliki endpoint API lain untuk data server sistem, 
-    // ganti URL fetch di bawah. Jika data ini statis, Anda bisa langsung update DOM.
-    fetch("https://api.mcsrvstat.us/3/mc.ytta.my.id")
-        .then(response => response.json())
-        .then(data => {
-            if (data.online === true) {
-                statusDot.className = "w-2.5 h-2.5 rounded-full bg-emerald-500";
-                statusText.innerText = `Online | ${data.players?.online ?? 0}/${data.players?.max ?? "?"} Players`;
-                statusText.className = "text-emerald-400 text-xs font-semibold";
-                
-                // Update CPU & Memory jika data tersedia dari API Anda
-                // document.getElementById("cpu-load").innerText = data.cpu + "% / 250%";
-                // document.getElementById("mem-usage").innerText = data.memory + " GiB / 6 GiB";
-            } else { 
-                setServerOffline(); 
-            }
-        }).catch(() => setServerOffline());
-}
+            const statusText = document.getElementById("status-text");
+            const statusDot = document.getElementById("status-dot");
+            fetch("https://api.mcsrvstat.us/3/mc.ytta.my.id")
+                .then(response => response.json())
+                .then(data => {
+                    if (data.online === true) {
+                        statusDot.className = "w-2.5 h-2.5 rounded-full bg-emerald-500";
+                        statusText.innerText = `Online | ${data.players?.online ?? 0}/${data.players?.max ?? "?"} Players`;
+                        statusText.className = "text-emerald-400 text-xs font-semibold";
+                    } else { setServerOffline(); }
+                }).catch(() => setServerOffline());
+        }
 
         function setServerOffline() {
             document.getElementById("status-dot").className = "w-2.5 h-2.5 rounded-full bg-rose-500";
