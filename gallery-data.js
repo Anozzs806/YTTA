@@ -121,11 +121,11 @@ const playersData = {
         ]
     },
     "Steve2": {
-        name: "UNKNOWN",
-        role: "KULI",
+        name: "Abidrajaibls",
+        role: "WARGA",
         skin: "Steve",
         photos: [
-            { url: "", label: "Coming Soon", desc: "" },
+            { url: "https://drive.google.com/file/d/1FC7AV-dgbSM6bp8N1xUM81nXSJ8iS_Yt/view?usp=drive_link", label: "Small Vilalge", desc: "A cozy small village featuring charming houses, peaceful paths, and a welcoming atmosphere. Perfect for survival gameplay, roleplay, or building a thriving community in Minecraft." },
             { url: "", label: "Coming Soon", desc: "" },
             { url: "", label: "Coming Soon", desc: "" },
             { url: "", label: "Coming Soon", desc: "" },
@@ -171,7 +171,7 @@ const governmentData = {
         { name: "YantoTambalBan", role: "SATPOL", skinUrl: "https://lh3.googleusercontent.com/d/1faMhY1b1QSwoStIvn84iMmUc-5S8-5qq" },
         { name: "ZED311", role: "SATPOL", skinUrl: "https://lh3.googleusercontent.com/d/1RmsD2e8pCEQvd90Ym-F_uYF408Hhpkm4" },
         { name: "Ipandora", role: "RT (RETIRED)", skinUrl: "https://lh3.googleusercontent.com/d/1thSevsAH560Qec0xgsHx4bDXw1kN5T2I" },
-        { name: "TakeAll", role: "KULI", skinUrl: "https://lh3.googleusercontent.com/d/1-Wji7FNT41UMRY8hBrVuIg78jFb9lDZm" },
+        { name: "TakeAll", role: "KULI", skinUrl: "https://lh3.googleusercontent.com/d/1FC7AV-dgbSM6bp8N1xUM81nXSJ8iS_Yt" },
         { name: "Ferclone", role: "KULI", skinUrl: "https://lh3.googleusercontent.com/d/1GK2K77hodU-AVsnHkqdoYk-Jyt46sevO" },
         { name: "Steve", role: "WARGA", skinUrl: "https://lh3.googleusercontent.com/d/1UfzVLZxJIMv02QSaTDmBZ216VlDiiJYY" }
     ]
