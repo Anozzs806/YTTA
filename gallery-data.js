@@ -120,7 +120,7 @@ const playersData = {
             { url: "", label: "Coming Soon", desc: "" }
         ]
     },
-    "Steve2": {
+    "Abidrajaibls": {
         name: "Abidrajaibls",
         role: "WARGA",
         skin: "Steve",
