@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YTTA Minecraft Community Server - Gallery</title>
+    
+    <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/1WiP_0ooq72Y1FTJjHH0d-XgLAihA9Mtj">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        enderDark: '#06020c',
+                        enderPurple: '#a855f7',
+                    },
+                    fontFamily: {
+                        grotesk: ['Space Grotesk', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #06020c; color: #ffffff; font-family: 'Poppins', sans-serif; overflow-x: hidden; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .gallery-item { animation: fadeIn 0.8s ease-out forwards; }
+        #modal { display: none; }
+        #modal.active { display: flex; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #06020c; }
+        ::-webkit-scrollbar-thumb { background: #1f113a; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a855f7; }
+    </style>
+</head>
+
+<body class="min-h-screen">
+
+    <header class="sticky top-0 z-[9999] bg-enderDark/95 border-b border-enderPurple/20 backdrop-blur-lg px-6 py-4 md:px-12 flex justify-between items-center w-full">
+        <a href="/" class="flex items-center gap-3 font-grotesk font-bold text-2xl text-white hover:opacity-90 transition">
+            <img src="https://lh3.googleusercontent.com/d/1WiP_0ooq72Y1FTJjHH0d-XgLAihA9Mtj" alt="YTTA Logo" class="w-10 h-10 rounded-lg border-2 border-enderPurple object-cover">
+            YTTA<span class="text-enderPurple">MC</span>
+        </a>
+
+    <nav class="hidden md:flex gap-8 font-semibold text-sm text-gray-400">
+    <a href="/" class="hover:text-enderPurple transition">Home</a>
+    <a href="/community/" class="text-enderPurple font-bold">Community</a> <a href="/gallery/" class="hover:text-enderPurple transition">Gallery</a> <a href="/faq/" class="hover:text-enderPurple transition">FAQ</a>
+    </nav>
+
+        <button id="mobile-menu-btn" aria-label="Menu" class="md:hidden text-white text-3xl p-2 cursor-pointer z-[10000]">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+
+    <nav id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-enderDark/95 border-b border-enderPurple/20 p-6 z-[9998] flex flex-col gap-4 font-semibold md:hidden shadow-2xl">
+    <a href="/" class="hover:text-enderPurple transition">Home</a>
+    <a href="/community/" class="text-enderPurple font-bold">Community</a> <a href="/gallery/" class="hover:text-enderPurple transition">Gallery</a> <a href="/faq/" class="hover:text-enderPurple transition">FAQ</a>
+    </nav>
+
+    <main class="max-w-7xl mx-auto p-8">
+        <div class="mb-12 text-center">
+            <h1 class="font-grotesk font-bold text-3xl md:text-4xl uppercase tracking-widest text-white drop-shadow-[0_4px_12px_rgba(168,85,247,0.3)]">COMMUNITY GALLERY</h1>
+            <div class="h-1 w-24 bg-enderPurple mx-auto mt-4 rounded"></div>
+            <p class="text-gray-400 mt-4 text-sm max-w-2xl mx-auto">Kumpulan karya, momen epik, dan kenangan indah para pemain di server YTTA.</p>
+        </div>
+
+        <!-- Gallery Grid (Masonry Layout) -->
+        <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+            
+            <!-- Item 1 -->
+            <div class="gallery-item break-inside-avoid group relative overflow-hidden rounded-2xl border border-white/5 hover:border-enderPurple/50 hover:shadow-[0_0_20px_rgba(168,85,247,0.2)] transition-all duration-500 cursor-zoom-in" onclick="openModal('https://lh3.googleusercontent.com/d/1aopgnRS5OBCVOfZhVqXUlSbHq1g1ehHY')" role="button" aria-label="Perbesar gambar">
+                <img src="https://lh3.googleusercontent.com/d/1aopgnRS5OBCVOfZhVqXUlSbHq1g1ehHY" loading="lazy" alt="Gallery Image 1" class="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out">
+                <div class="absolute inset-0 bg-gradient-to-t from-enderDark/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-5">
+                    <span class="text-white text-sm font-semibold tracking-wider flex items-center gap-2">
+                        <i class="fa-solid fa-magnifying-glass-plus text-enderPurple"></i> View Image
+                    </span>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="gallery-item break-inside-avoid group relative overflow-hidden rounded-2xl border border-white/5 hover:border-enderPurple/50 hover:shadow-[0_0_20px_rgba(168,85,247,0.2)] transition-all duration-500 cursor-zoom-in" onclick="openModal('https://lh3.googleusercontent.com/d/1iXhKrj2ZxReI-Sg6AwkxNEUCBqfJZuQ3')" role="button" aria-label="Perbesar gambar">
+                <img src="https://lh3.googleusercontent.com/d/1iXhKrj2ZxReI-Sg6AwkxNEUCBqfJZuQ3" loading="lazy" alt="Gallery Image 2" class="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out">
+                <div class="absolute inset-0 bg-gradient-to-t from-enderDark/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-5">
+                    <span class="text-white text-sm font-semibold tracking-wider flex items-center gap-2">
+                        <i class="fa-solid fa-magnifying-glass-plus text-enderPurple"></i> View Image
+                    </span>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="gallery-item break-inside-avoid group relative overflow-hidden rounded-2xl border border-white/5 hover:border-enderPurple/50 hover:shadow-[0_0_20px_rgba(168,85,247,0.2)] transition-all duration-500 cursor-zoom-in" onclick="openModal('https://lh3.googleusercontent.com/d/1r4eU6u8OYV2WnfRJ0LupjZuq8y6Ik2Zq')" role="button" aria-label="Perbesar gambar">
+                <img src="https://lh3.googleusercontent.com/d/1r4eU6u8OYV2WnfRJ0LupjZuq8y6Ik2Zq" loading="lazy" alt="Gallery Image 3" class="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out">
+                <div class="absolute inset-0 bg-gradient-to-t from-enderDark/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-5">
+                    <span class="text-white text-sm font-semibold tracking-wider flex items-center gap-2">
+                        <i class="fa-solid fa-magnifying-glass-plus text-enderPurple"></i> View Image
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Modal Zoom (Diperbaiki z-index menjadi 10000 agar berada di atas header) -->
+    <div id="modal" class="fixed inset-0 z-[10000] bg-black/95 items-center justify-center p-4 md:p-8 cursor-zoom-out backdrop-blur-sm transition-opacity duration-300" onclick="closeModal()">
+        <div class="relative max-w-5xl w-full flex justify-center">
+            <button onclick="closeModal()" class="absolute -top-10 right-0 text-white hover:text-enderPurple text-2xl transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img id="modal-img" src="" class="max-w-full max-h-[85vh] rounded-xl shadow-[0_0_40px_rgba(0,0,0,0.8)] border border-white/10 object-contain">
+        </div>
+    </div>
+
+    <script>
+        // Toggle Mobile Menu
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            menu.classList.toggle('hidden');
+        });
+
+        // Close Menu on click outside
+        document.addEventListener('click', (e) => {
+            if (!menu.contains(e.target) && !btn.contains(e.target)) {
+                menu.classList.add('hidden');
+            }
+        });
+
+        // Modal Zoom Logic
+        const modal = document.getElementById('modal');
+        const modalImg = document.getElementById('modal-img');
+        
+        function openModal(src) { 
+            modalImg.src = src; 
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Mencegah scrolling saat modal terbuka
+        }
+        
+        function closeModal() { 
+            modal.classList.remove('active'); 
+            document.body.style.overflow = ''; // Mengembalikan scrolling normal
+        }
+
+        // Menutup modal dengan tombol Escape (ESC) pada keyboard
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape" && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
