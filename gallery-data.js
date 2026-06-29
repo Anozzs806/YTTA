@@ -24,7 +24,7 @@ const playersData = {
             { url: "https://lh3.googleusercontent.com/d/1RJVaV0e9TB-5IA-SLVKQA1UFqplKEegK", label: "Rumah Shiro", desc: "Rumah Sederhana Tempat Tinggal ShirokuHimatsu." },
             { url: "https://lh3.googleusercontent.com/d/1TEbRZJOQ8FsXdZmbPgQqMJi-jR0ooj9W", label: "Zona Parkir Ghast", desc: "Parkiran Untuk Ghast." },
             { url: "https://lh3.googleusercontent.com/d/1YCBoOWhgRox7K_6TmP1qjW2WhJh8Svnh", label: "Storage Room", desc: "Tempat Penyimpan Barang Resource" },
-            { url: "https://drive.google.com/file/d/1lXFEI1LFpQNVzZdV6SOqk6Rwcs80DOAr/view?usp=drive_link", label: "Stadium", desc: "A battle-ready arena designed for intense player-versus-player combat. Featuring a balanced layout, strategic obstacles, and an immersive atmosphere, this arena is perfect for testing skills, tactics, and teamwork." },
+            { url: "https://lh3.googleusercontent.com/d/1lXFEI1LFpQNVzZdV6SOqk6Rwcs80DOAr", label: "Stadium", desc: "A battle-ready arena designed for intense player-versus-player combat. Featuring a balanced layout, strategic obstacles, and an immersive atmosphere, this arena is perfect for testing skills, tactics, and teamwork." },
             { url: "", label: "Coming Soon", desc: "" },
             { url: "", label: "Coming Soon", desc: "" }
         ]
