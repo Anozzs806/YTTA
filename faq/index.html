@@ -118,7 +118,7 @@
                         <ul class="flex flex-col gap-1 text-xs font-medium pl-1">
                             <li><span class="text-gray-500 uppercase tracking-wider font-bold inline-block w-28 text-[10px]">Name Server :</span> <span class="text-gray-300">Bebas</span></li>
                             <li><span class="text-gray-500 uppercase tracking-wider font-bold inline-block w-28 text-[10px]">IP Server   :</span> <span class="text-enderGlow font-semibold bg-enderPurple/10 px-1.5 py-0.5 rounded">mc.ytta.my.id</span></li>
-                            <li><span class="text-gray-500 uppercase tracking-wider font-bold inline-block w-28 text-[10px]">Port        :</span> <span class="text-amber-400 font-semibold">25830</span></li>
+                            <li><span class="text-gray-500 uppercase tracking-wider font-bold inline-block w-28 text-[10px]">Port        :</span> <span class="text-amber-400 font-semibold">22816</span></li>
                         </ul>
                     </div>
                 
@@ -162,28 +162,16 @@
                     <i id="accordion-icon-4" class="fa-solid fa-chevron-down text-sm transition-transform duration-300"></i>
                 </button>
                 <div id="accordion-content-4" class="hidden px-6 pb-6 text-sm text-gray-400 leading-relaxed border-t border-white/5 pt-4 flex flex-col gap-4">
-                    <p>Server YTTA menggunakan plugin <strong class="text-white font-semibold">RedProtect</strong> untuk mengamankan bangunan. Perlindungan ini otomatis mengunci area dari dasar batuan paling bawah (*bedrock*) hingga batas langit tertinggi. Kamu bisa memilih salah satu dari 2 cara mudah di bawah ini:</p>
+                    <p>Server YTTA menggunakan plugin <strong class="text-white font-semibold">RedProtect</strong> untuk mengamankan bangunan. Perlindungan ini otomatis mengunci area dari dasar batuan paling bawah (*bedrock*) hingga batas langit tertinggi </p>
                     
                     <div class="bg-black/20 p-4 rounded-xl border border-white/5">
                         <h4 class="text-white font-bold mb-1.5 flex items-center gap-2 text-xs uppercase tracking-wider text-enderGlow">
-                            <i class="fa-solid fa-border-all"></i> Cara 1: Menggunakan Pagar (Metode Otomatis)
+                            <i class="fa-solid fa-border-all"></i> Menggunakan Pagar (Metode Otomatis)
                         </h4>
                         <ol class="list-decimal pl-4 text-xs flex flex-col gap-1">
                             <li>Kelilingi area rumah atau tanah milikmu menggunakan <span class="text-gray-200">Pagar (Fence)</span> jenis apa saja. Pastikan semua ujung pagar tersambung rapat membentuk kotak tanpa terputus.</li>
                             <li>Tempelkan sebuah papan tanda <span class="text-gray-200">(Sign)</span> di salah satu tiang pagar tersebut.</li>
                             <li>Tulis teks <code class="bg-black/40 px-1 py-0.5 rounded text-amber-400 font-mono font-bold">[rp]</code> pada baris pertama papan tanda, lalu tekan selesai. Papan akan otomatis memproses dan mengunci wilayah di dalam pagar.</li>
-                        </ol>
-                    </div>
-
-                    <div class="bg-black/20 p-4 rounded-xl border border-white/5">
-                        <h4 class="text-white font-bold mb-1.5 flex items-center gap-2 text-xs uppercase tracking-wider text-enderGlow">
-                            <i class="fa-solid fa-wand-magic-sparkles"></i> Cara 2: Menggunakan Alat Seleksi (Wand)
-                        </h4>
-                        <ol class="list-decimal pl-4 text-xs flex flex-col gap-1">
-                            <li>Ketik perintah <code class="bg-black/40 px-1 py-0.5 rounded text-white font-mono">/rp wand</code> di kolom chat untuk mendapatkan alat penanda wilayah.</li>
-                            <li>Pergi ke sudut pojok kiri depan tanahmu, lalu <span class="text-gray-200 font-medium">Klik Kiri</span> pada blok lantai tersebut.</li>
-                            <li>Pergi ke sudut pojok kanan belakang secara diagonal, lalu <span class="text-gray-200 font-medium">Klik Kanan</span> pada blok lantai seberangnya.</li>
-                            <li>Kunci area tersebut dengan mengetik perintah chat: <code class="bg-black/40 px-1 py-0.5 rounded text-white font-mono">/rp claim [Nama_Klaim]</code> (Contoh: <span class="text-gray-300 font-mono">/rp claim rumahku</span>).</li>
                         </ol>
                     </div>
 
@@ -201,6 +189,53 @@
                     </div>
                 </div>
             </div>
+            
+<!-- ACCORDION NO 6: CARA MENGGUNAKAN ISHOP -->
+<div class="border border-white/5 rounded-xl overflow-hidden bg-enderDark/60 transition hover:border-enderPurple/30">
+    <button onclick="toggleAccordion(6)" class="w-full py-4 px-6 text-left font-bold text-base text-gray-200 hover:text-enderPurple flex justify-between items-center transition">
+        <span>Panduan Lengkap Fitur iShop (Toko Pemain)</span>
+        <i id="accordion-icon-6" class="fa-solid fa-chevron-down text-sm transition-transform duration-300"></i>
+    </button>
+    <div id="accordion-content-6" class="hidden px-6 pb-6 text-sm text-gray-400 leading-relaxed border-t border-white/5 pt-4 flex flex-col gap-4">
+        
+        <div class="bg-black/20 p-4 rounded-xl border border-white/5">
+            <h4 class="text-white font-bold mb-2 flex items-center gap-2 text-xs uppercase tracking-wider text-enderGlow">
+                <i class="fa-solid fa-store"></i> Membuat Toko Sendiri
+            </h4>
+            <ul class="list-decimal pl-4 text-xs flex flex-col gap-2">
+                <li>Arahkan pandangan ke blok Barrel lalu ketik <code class="bg-black/40 px-1 py-0.5 rounded text-amber-400 font-mono font-bold">/shop create</code>.</li>
+                <li>Klik blok tersebut (Left/Right Click) atau gunakan <code class="bg-black/40 px-1 py-0.5 rounded text-amber-400 font-mono font-bold">/shop manage &lt;id&gt;</code> untuk mulai mengatur.</li>
+                <li>Klik ikon <span class="text-emerald-400 font-bold">Lime Dye</span> untuk membuat trade baru.</li>
+                <li>Masukkan item yang ingin dijual ke kolom <span class="text-gray-200">Kiri</span>, dan harga item di kolom <span class="text-gray-200">Kanan</span>.</li>
+                <li>Klik <span class="text-emerald-400 font-bold">Lime Dye</span> lagi untuk menyimpan. Gunakan <span class="text-rose-500 font-bold">TNT</span> untuk menghapus trade.</li>
+            </ul>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-enderPurple/5 p-4 rounded-xl border border-enderPurple/10">
+                <h4 class="text-white font-bold mb-2 flex items-center gap-2 text-xs uppercase tracking-wider">
+                    <i class="fa-solid fa-magnifying-glass text-enderPurple"></i> Fitur Pembeli
+                </h4>
+                <ul class="text-xs font-mono space-y-1.5">
+                    <li><span class="text-enderGlow w-20 inline-block">/shop shops</span> → Lihat semua toko.</li>
+                    <li><span class="text-enderGlow w-20 inline-block">/shop find &lt;item&gt;</span> → Cari barang.</li>
+                    <li><span class="text-enderGlow w-20 inline-block">/shop view &lt;id&gt;</span> → Lihat isi toko.</li>
+                </ul>
+            </div>
+            <div class="bg-enderPurple/5 p-4 rounded-xl border border-enderPurple/10">
+                <h4 class="text-white font-bold mb-2 flex items-center gap-2 text-xs uppercase tracking-wider">
+                    <i class="fa-solid fa-gear text-enderPurple"></i> Fitur Penjual
+                </h4>
+                <ul class="text-xs font-mono space-y-1.5">
+                    <li><span class="text-enderGlow w-20 inline-block">/shop list</span> → Daftar tokomu.</li>
+                    <li><span class="text-enderGlow w-20 inline-block">/shop stock</span> → Atur stok barang.</li>
+                    <li><span class="text-enderGlow w-20 inline-block">/shop sold</span> → Cek penjualan.</li>
+                </ul>
+            </div>
+        </div>
+        <p class="text-[10px] text-amber-500">*Gunakan <code class="bg-black/50 px-1 rounded font-mono">/shop help</code> di dalam game untuk melihat daftar lengkap perintah admin/penjual.</p>
+    </div>
+</div>
 
             <!-- ACCORDION NO 5: SOLUSI LAG / ERROR CONNECT -->
             <div class="border border-white/5 rounded-xl overflow-hidden bg-enderDark/60 transition hover:border-enderPurple/30">
@@ -212,13 +247,15 @@
                     <p>Ada beberapa kemungkinan umum yang menjadi penyebab masalah koneksi tersebut:</p>
                     <ol class="list-decimal pl-5 text-xs flex flex-col gap-1.5">
                         <li><strong class="text-gray-200">Server Maintenance:</strong> Silakan cek indikator status ketersediaan server di halaman depan web untuk memastikan server sedang online.</li>
-                        <li><strong class="text-gray-200">Kesalahan Port Bedrock:</strong> Pengguna HP sering lupa mengubah port bawaan. Pastikan kolom Port diisi angka <span class="text-amber-400 font-semibold">25830</span>, bukan port default 19132.</li>
-                        <li><strong class="text-gray-200">Masalah Jaringan:</strong> Server YTTA Menggunakan Hosting Berlokasi Singapore. Pastikan kestabilan ping internet provider kamu aman sebelum bermain.</li>
+                        <li><strong class="text-gray-200">Kesalahan Port Bedrock:</strong> Pengguna HP sering lupa mengubah port bawaan. Pastikan kolom Port diisi angka <span class="text-amber-400 font-semibold">22816</span>, bukan port default 19132.</li>
+                        <li><strong class="text-gray-200">Masalah Jaringan:</strong> Server YTTA Menggunakan Hosting Berlokasi Jakarta. Pastikan kestabilan ping internet provider kamu aman sebelum bermain.</li>
                     </ol>
                 </div>
             </div>
 
         </div>
+
+        
     </main>
 
     <footer class="w-full bg-black/80 border-t border-enderPurple/10 py-8 px-6 text-center text-xs text-gray-500">
