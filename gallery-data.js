@@ -125,7 +125,7 @@ const playersData = {
         role: "WARGA",
         skin: "Steve",
         photos: [
-            { url: "https://drive.google.com/file/d/1FC7AV-dgbSM6bp8N1xUM81nXSJ8iS_Yt/view?usp=drive_link", label: "Small Vilalge", desc: "A cozy small village featuring charming houses, peaceful paths, and a welcoming atmosphere. Perfect for survival gameplay, roleplay, or building a thriving community in Minecraft." },
+            { url: "https://lh3.googleusercontent.com/d/1aeRbCcJqQGunCSij_eZ0WOoDRA_Lfy5_", label: "Small Vilalge", desc: "A cozy small village featuring charming houses, peaceful paths, and a welcoming atmosphere. Perfect for survival gameplay, roleplay, or building a thriving community in Minecraft." },
             { url: "", label: "Coming Soon", desc: "" },
             { url: "", label: "Coming Soon", desc: "" },
             { url: "", label: "Coming Soon", desc: "" },
