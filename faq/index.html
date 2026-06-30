@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YTTA Minecraft Community Server - FAQ & Panduan</title>
     
-    <!-- LOGO UNTUK BAR / TAB WEBSITE (FAVICON) -->
     <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/1WiP_0ooq72Y1FTJjHH0d-XgLAihA9Mtj">
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -29,27 +28,26 @@
             }
         }
     </script>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
 
-        // Fungsi klik tombol
-        btn.onclick = function(e) {
-            e.preventDefault();
-            e.stopPropagation(); // Mencegah klik terhenti oleh elemen lain
-            menu.classList.toggle('hidden');
-        };
+            // Fungsi klik tombol
+            btn.onclick = function(e) {
+                e.preventDefault();
+                e.stopPropagation(); // Mencegah klik terhenti oleh elemen lain
+                menu.classList.toggle('hidden');
+            };
 
-        // Menutup menu jika klik di luar area
-        document.addEventListener('click', function(e) {
-            if (!menu.contains(e.target) && !btn.contains(e.target)) {
-                menu.classList.add('hidden');
-            }
+            // Menutup menu jika klik di luar area
+            document.addEventListener('click', function(e) {
+                if (!menu.contains(e.target) && !btn.contains(e.target)) {
+                    menu.classList.add('hidden');
+                }
+            });
         });
-    });
-</script>
-</script>
+    </script>
     <style>
         body { background-color: #06020c; color: #ffffff; font-family: 'Poppins', sans-serif; overflow-x: hidden; }
         ::-webkit-scrollbar { width: 8px; }
@@ -60,18 +58,15 @@
 </head>
 <body class="min-h-screen flex flex-col">
 <header class="sticky top-0 z-[9999] bg-enderDark/95 border-b border-enderPurple/20 backdrop-blur-lg px-6 py-4 md:px-12 flex justify-between items-center w-full">
-    <!-- Logo -->
     <a href="../" class="flex items-center gap-3 font-grotesk font-bold text-2xl text-white flex-shrink-0 z-[100]">
     <img src="https://lh3.googleusercontent.com/d/1WiP_0ooq72Y1FTJjHH0d-XgLAihA9Mtj" class="w-10 h-10 rounded-lg border-2 border-enderPurple object-cover">
         YTTA<span class="text-enderPurple">MC</span>
     </a>
 
-    <!-- Tombol Hamburger dengan z-index ekstrem -->
     <button id="mobile-menu-btn" class="md:hidden text-white text-3xl relative z-[10000] p-3 cursor-pointer focus:outline-none">
         <i class="fa-solid fa-bars"></i>
     </button>
 
-    <!-- Navigasi -->
     <nav id="mobile-menu" class="hidden md:flex absolute md:static top-full left-0 w-full md:w-auto bg-enderDark/95 md:bg-transparent border-b md:border-none border-enderPurple/20 p-6 md:p-0 z-[9999]">
         <ul class="flex flex-col md:flex-row gap-6 md:gap-8 font-semibold text-sm">
             <li><a href="../" class="hover:text-enderPurple transition">Home</a></li>
@@ -91,7 +86,6 @@
 
         <div class="w-full bg-enderCard/40 border border-enderPurple/10 rounded-2xl p-6 md:p-8 flex flex-col gap-4">
             
-            <!-- ACCORDION NO 1: CARA MASUK SERVER -->
             <div class="border border-white/5 rounded-xl overflow-hidden bg-enderDark/60 transition hover:border-enderPurple/30">
                 <button onclick="toggleAccordion(1)" class="w-full py-4 px-6 text-left font-bold text-base text-gray-200 hover:text-enderPurple flex justify-between items-center transition">
                     <span>Bagaimana cara masuk ke Server YTTA Minecraft?</span>
@@ -103,7 +97,7 @@
                         <h4 class="text-white font-bold mb-2 flex items-center gap-2">
                             <i class="fa-solid fa-desktop text-enderPurple text-xs"></i> Java Edition (PC)
                         </h4>
-                        <p class="text-xs text-gray-400 mb-3">Salin IP di bawah ini, masuk ke menu <span class="text-gray-200 font-medium">Multiplayer</span> &rarr; <span class="text-gray-200 font-medium">Add Server</span> di game kamu.</p>
+                        <p class="text-xs text-gray-400 mb-3">Salin IP di bawah ini, masuk ke menu <span class="text-gray-200 font-medium">Multiplayer</span> → <span class="text-gray-200 font-medium">Add Server</span> di game kamu.</p>
                         <ul class="flex flex-col gap-1 text-xs font-medium pl-1">
                             <li><span class="text-gray-500 uppercase tracking-wider font-bold inline-block w-28 text-[10px]">Name Server :</span> <span class="text-gray-300">Bebas</span></li>
                             <li><span class="text-gray-500 uppercase tracking-wider font-bold inline-block w-28 text-[10px]">IP Server   :</span> <span class="text-enderGlow font-semibold bg-enderPurple/10 px-1.5 py-0.5 rounded">mc.ytta.my.id</span></li>
@@ -114,7 +108,7 @@
                         <h4 class="text-white font-bold mb-2 flex items-center gap-2">
                             <i class="fa-solid fa-mobile-screen-button text-enderPurple text-xs"></i> Bedrock Edition (Mobile / HP / Win10)
                         </h4>
-                        <p class="text-xs text-gray-400 mb-3">Buka game Minecraft, pilih tab <span class="text-gray-200 font-medium">Play</span> &rarr; <span class="text-gray-200 font-medium">Servers</span>, scroll ke paling bawah lalu klik <span class="text-gray-200 font-medium">Add Server</span>.</p>
+                        <p class="text-xs text-gray-400 mb-3">Buka game Minecraft, pilih tab <span class="text-gray-200 font-medium">Play</span> → <span class="text-gray-200 font-medium">Servers</span>, scroll ke paling bawah lalu klik <span class="text-gray-200 font-medium">Add Server</span>.</p>
                         <ul class="flex flex-col gap-1 text-xs font-medium pl-1">
                             <li><span class="text-gray-500 uppercase tracking-wider font-bold inline-block w-28 text-[10px]">Name Server :</span> <span class="text-gray-300">Bebas</span></li>
                             <li><span class="text-gray-500 uppercase tracking-wider font-bold inline-block w-28 text-[10px]">IP Server   :</span> <span class="text-enderGlow font-semibold bg-enderPurple/10 px-1.5 py-0.5 rounded">mc.ytta.my.id</span></li>
@@ -125,25 +119,23 @@
                 </div>
             </div>
 
-           <!-- ACCORDION NO 2: VERSI MINECRAFT & CROSS-VERSION -->
-    <div class="border border-white/5 rounded-xl overflow-hidden bg-enderDark/60 transition hover:border-enderPurple/30">
-        <button onclick="toggleAccordion(2)" class="w-full py-4 px-6 text-left font-bold text-base text-gray-200 hover:text-enderPurple flex justify-between items-center transition">
-        <span>Berapa versi Minecraft yang bisa digunakan untuk masuk ke server?</span>
-        <i id="accordion-icon-2" class="fa-solid fa-chevron-down text-sm transition-transform duration-300"></i>
-            </button>
+            <div class="border border-white/5 rounded-xl overflow-hidden bg-enderDark/60 transition hover:border-enderPurple/30">
+                <button onclick="toggleAccordion(2)" class="w-full py-4 px-6 text-left font-bold text-base text-gray-200 hover:text-enderPurple flex justify-between items-center transition">
+                    <span>Berapa versi Minecraft yang bisa digunakan untuk masuk ke server?</span>
+                    <i id="accordion-icon-2" class="fa-solid fa-chevron-down text-sm transition-transform duration-300"></i>
+                </button>
                 <div id="accordion-content-2" class="hidden px-6 pb-5 text-sm text-gray-400 leading-relaxed border-t border-white/5 pt-3">
-        Server YTTA saat ini berjalan di versi utama <strong>26.1.2</strong>. 
-        <p class="mt-2">
-            Berkat dukungan plugin <em>ViaVersion</em> dan <em>ViaBackwards</em>, kamu bisa bergabung menggunakan versi Minecraft apa pun (mulai dari versi lama hingga versi terbaru saat ini).
-        </p>
-        <p class="mt-3 text-xs text-amber-400 flex items-center gap-1.5">
-            <i class="fa-solid fa-triangle-exclamation"></i> 
-            <strong>Catatan:</strong> Meskipun kamu bisa menggunakan versi berapapun, disarankan untuk selalu menggunakan versi terbaru agar fitur-fitur game terbaru tetap bisa dinikmati dengan lancar tanpa bug visual.
-            </p>
+                    Server YTTA saat ini berjalan di versi utama <strong>26.1.2</strong>. 
+                    <p class="mt-2">
+                        Berkat dukungan plugin <em>ViaVersion</em> dan <em>ViaBackwards</em>, kamu bisa bergabung menggunakan versi Minecraft apa pun (mulai dari versi lama hingga versi terbaru saat ini).
+                    </p>
+                    <p class="mt-3 text-xs text-amber-400 flex items-center gap-1.5">
+                        <i class="fa-solid fa-triangle-exclamation"></i> 
+                        <strong>Catatan:</strong> Meskipun kamu bisa menggunakan versi berapapun, disarankan untuk selalu menggunakan versi terbaru agar fitur-fitur game terbaru tetap bisa dinikmati dengan lancar tanpa bug visual.
+                    </p>
                 </div>
-                </div>
+            </div>
 
-            <!-- ACCORDION NO 3: AKUN CRACKED -->
             <div class="border border-white/5 rounded-xl overflow-hidden bg-enderDark/60 transition hover:border-enderPurple/30">
                 <button onclick="toggleAccordion(3)" class="w-full py-4 px-6 text-left font-bold text-base text-gray-200 hover:text-enderPurple flex justify-between items-center transition">
                     <span>Apakah server ini mendukung pemain Cracked / Non-Premium?</span>
@@ -155,7 +147,6 @@
                 </div>
             </div>
 
-            <!-- ACCORDION NO 4: PROTEKSI GRIEFING -->
             <div class="border border-white/5 rounded-xl overflow-hidden bg-enderDark/60 transition hover:border-enderPurple/30">
                 <button onclick="toggleAccordion(4)" class="w-full py-4 px-6 text-left font-bold text-base text-gray-200 hover:text-enderPurple flex justify-between items-center transition">
                     <span>Bagaimana cara melindungi area rumah agar tidak dihancurkan (Land Claim)?</span>
@@ -180,64 +171,71 @@
                             <i class="fa-solid fa-terminal text-enderPurple"></i> Peraturan & Perintah Tambahan RedProtect:
                         </h4>
                         <ul class="flex flex-col gap-1.5 text-xs font-medium font-mono pl-1">
-                            <li><span class="text-enderGlow inline-block w-44">/rp addmember [Nama]</span> <span class="text-gray-400 font-sans">&rarr; Memberikan izin bangun/buka chest kepada teman.</span></li>
-                            <li><span class="text-enderGlow inline-block w-44">/rp removemember [Nama]</span> <span class="text-gray-400 font-sans">&rarr; Mencabut izin bangun milik teman.</span></li>
-                            <li><span class="text-enderGlow inline-block w-44">/rp info</span> <span class="text-gray-400 font-sans">&rarr; Melihat informasi pemilik dan batas wilayah klaim tempat kamu berdiri.</span></li>
-                            <li><span class="text-enderGlow inline-block w-44">/rp flag</span> <span class="text-gray-400 font-sans">&rarr; Membuka Menu Untuk Mengatur Permission </span></li>
-                            <li><span class="text-enderGlow inline-block w-44">/rp delete</span> <span class="text-gray-400 font-sans">&rarr; Menghapus klaim perlindungan tanah (jika ingin pindah lokasi).</span></li>
+                            <li><span class="text-enderGlow inline-block w-44">/rp addmember [Nama]</span> <span class="text-gray-400 font-sans">→ Memberikan izin bangun/buka chest kepada teman.</span></li>
+                            <li><span class="text-enderGlow inline-block w-44">/rp removemember [Nama]</span> <span class="text-gray-400 font-sans">→ Mencabut izin bangun milik teman.</span></li>
+                            <li><span class="text-enderGlow inline-block w-44">/rp info</span> <span class="text-gray-400 font-sans">→ Melihat informasi pemilik dan batas wilayah klaim tempat kamu berdiri.</span></li>
+                            <li><span class="text-enderGlow inline-block w-44">/rp flag</span> <span class="text-gray-400 font-sans">→ Membuka Menu Untuk Mengatur Permission </span></li>
+                            <li><span class="text-enderGlow inline-block w-44">/rp delete</span> <span class="text-gray-400 font-sans">→ Menghapus klaim perlindungan tanah (jika ingin pindah lokasi).</span></li>
                         </ul>
                     </div>
                 </div>
             </div>
             
-<!-- ACCORDION NO 6: CARA MENGGUNAKAN ISHOP -->
-<div class="border border-white/5 rounded-xl overflow-hidden bg-enderDark/60 transition hover:border-enderPurple/30">
-    <button onclick="toggleAccordion(6)" class="w-full py-4 px-6 text-left font-bold text-base text-gray-200 hover:text-enderPurple flex justify-between items-center transition">
-        <span>Panduan Lengkap Fitur iShop (Toko Pemain)</span>
-        <i id="accordion-icon-6" class="fa-solid fa-chevron-down text-sm transition-transform duration-300"></i>
-    </button>
-    <div id="accordion-content-6" class="hidden px-6 pb-6 text-sm text-gray-400 leading-relaxed border-t border-white/5 pt-4 flex flex-col gap-4">
-        
-        <div class="bg-black/20 p-4 rounded-xl border border-white/5">
-            <h4 class="text-white font-bold mb-2 flex items-center gap-2 text-xs uppercase tracking-wider text-enderGlow">
-                <i class="fa-solid fa-store"></i> Membuat Toko Sendiri
-            </h4>
-            <ul class="list-decimal pl-4 text-xs flex flex-col gap-2">
-                <li>Arahkan pandangan ke blok Barrel lalu ketik <code class="bg-black/40 px-1 py-0.5 rounded text-amber-400 font-mono font-bold">/shop create</code>.</li>
-                <li>Klik blok tersebut (Left/Right Click) atau gunakan <code class="bg-black/40 px-1 py-0.5 rounded text-amber-400 font-mono font-bold">/shop manage &lt;id&gt;</code> untuk mulai mengatur.</li>
-                <li>Klik ikon <span class="text-emerald-400 font-bold">Lime Dye</span> untuk membuat trade baru.</li>
-                <li>Masukkan item yang ingin dijual ke kolom <span class="text-gray-200">Kiri</span>, dan harga item di kolom <span class="text-gray-200">Kanan</span>.</li>
-                <li>Klik <span class="text-emerald-400 font-bold">Lime Dye</span> lagi untuk menyimpan. Gunakan <span class="text-rose-500 font-bold">TNT</span> untuk menghapus trade.</li>
-            </ul>
-        </div>
+            <div class="border border-white/5 rounded-xl overflow-hidden bg-enderDark/60 transition hover:border-enderPurple/30">
+                <button onclick="toggleAccordion(6)" class="w-full py-4 px-6 text-left font-bold text-base text-gray-200 hover:text-enderPurple flex justify-between items-center transition">
+                    <span>Panduan Lengkap Fitur iShop (Toko Pemain)</span>
+                    <i id="accordion-icon-6" class="fa-solid fa-chevron-down text-sm transition-transform duration-300"></i>
+                </button>
+                <div id="accordion-content-6" class="hidden px-6 pb-6 text-sm text-gray-400 leading-relaxed border-t border-white/5 pt-4 flex flex-col gap-4">
+                    
+                    <div class="relative w-full overflow-hidden rounded-xl border border-enderPurple/20 bg-black/40 mb-2" style="padding-top: 56.25%;">
+                        <iframe class="absolute top-0 left-0 w-full h-full" 
+                            src="https://www.youtube.com/embed/gbJHbaCIZSw" 
+                            title="Panduan Cara Jualan iShop" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="bg-black/20 p-4 rounded-xl border border-white/5">
+                        <h4 class="text-white font-bold mb-2 flex items-center gap-2 text-xs uppercase tracking-wider text-enderGlow">
+                            <i class="fa-solid fa-store"></i> Membuat Toko Sendiri
+                        </h4>
+                        <ul class="list-decimal pl-4 text-xs flex flex-col gap-2">
+                            <li>Arahkan pandangan ke blok Barrel lalu ketik <code class="bg-black/40 px-1 py-0.5 rounded text-amber-400 font-mono font-bold">/shop create</code>.</li>
+                            <li>Klik blok tersebut (Left/Right Click) atau gunakan <code class="bg-black/40 px-1 py-0.5 rounded text-amber-400 font-mono font-bold">/shop manage &lt;id&gt;</code> untuk mulai mengatur.</li>
+                            <li>Klik ikon <span class="text-emerald-400 font-bold">Lime Dye</span> untuk membuat trade baru.</li>
+                            <li>Masukkan item yang ingin dijual ke kolom <span class="text-gray-200">Kiri</span>, dan harga item di kolom <span class="text-gray-200">Kanan</span>.</li>
+                            <li>Klik <span class="text-emerald-400 font-bold">Lime Dye</span> lagi untuk menyimpan. Gunakan <span class="text-rose-500 font-bold">TNT</span> untuk menghapus trade.</li>
+                        </ul>
+                    </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="bg-enderPurple/5 p-4 rounded-xl border border-enderPurple/10">
-                <h4 class="text-white font-bold mb-2 flex items-center gap-2 text-xs uppercase tracking-wider">
-                    <i class="fa-solid fa-magnifying-glass text-enderPurple"></i> Fitur Pembeli
-                </h4>
-                <ul class="text-xs font-mono space-y-1.5">
-                    <li><span class="text-enderGlow w-20 inline-block">/shop shops</span> → Lihat semua toko.</li>
-                    <li><span class="text-enderGlow w-20 inline-block">/shop find &lt;item&gt;</span> → Cari barang.</li>
-                    <li><span class="text-enderGlow w-20 inline-block">/shop view &lt;id&gt;</span> → Lihat isi toko.</li>
-                </ul>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-enderPurple/5 p-4 rounded-xl border border-enderPurple/10">
+                            <h4 class="text-white font-bold mb-2 flex items-center gap-2 text-xs uppercase tracking-wider">
+                                <i class="fa-solid fa-magnifying-glass text-enderPurple"></i> Fitur Pembeli
+                            </h4>
+                            <ul class="text-xs font-mono space-y-1.5">
+                                <li><span class="text-enderGlow w-20 inline-block">/shop shops</span> → Lihat semua toko.</li>
+                                <li><span class="text-enderGlow w-20 inline-block">/shop find &lt;item&gt;</span> → Cari barang.</li>
+                                <li><span class="text-enderGlow w-20 inline-block">/shop view &lt;id&gt;</span> → Lihat isi toko.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-enderPurple/5 p-4 rounded-xl border border-enderPurple/10">
+                            <h4 class="text-white font-bold mb-2 flex items-center gap-2 text-xs uppercase tracking-wider">
+                                <i class="fa-solid fa-gear text-enderPurple"></i> Fitur Penjual
+                            </h4>
+                            <ul class="text-xs font-mono space-y-1.5">
+                                <li><span class="text-enderGlow w-20 inline-block">/shop list</span> → Daftar tokomu.</li>
+                                <li><span class="text-enderGlow w-20 inline-block">/shop stock</span> → Atur stok barang.</li>
+                                <li><span class="text-enderGlow w-20 inline-block">/shop sold</span> → Cek penjualan.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="text-[10px] text-amber-500">*Gunakan <code class="bg-black/50 px-1 rounded font-mono">/shop help</code> di dalam game untuk melihat daftar lengkap perintah admin/penjual.</p>
+                </div>
             </div>
-            <div class="bg-enderPurple/5 p-4 rounded-xl border border-enderPurple/10">
-                <h4 class="text-white font-bold mb-2 flex items-center gap-2 text-xs uppercase tracking-wider">
-                    <i class="fa-solid fa-gear text-enderPurple"></i> Fitur Penjual
-                </h4>
-                <ul class="text-xs font-mono space-y-1.5">
-                    <li><span class="text-enderGlow w-20 inline-block">/shop list</span> → Daftar tokomu.</li>
-                    <li><span class="text-enderGlow w-20 inline-block">/shop stock</span> → Atur stok barang.</li>
-                    <li><span class="text-enderGlow w-20 inline-block">/shop sold</span> → Cek penjualan.</li>
-                </ul>
-            </div>
-        </div>
-        <p class="text-[10px] text-amber-500">*Gunakan <code class="bg-black/50 px-1 rounded font-mono">/shop help</code> di dalam game untuk melihat daftar lengkap perintah admin/penjual.</p>
-    </div>
-</div>
 
-            <!-- ACCORDION NO 5: SOLUSI LAG / ERROR CONNECT -->
             <div class="border border-white/5 rounded-xl overflow-hidden bg-enderDark/60 transition hover:border-enderPurple/30">
                 <button onclick="toggleAccordion(5)" class="w-full py-4 px-6 text-left font-bold text-base text-gray-200 hover:text-enderPurple flex justify-between items-center transition">
                     <span>Kenapa saya tidak bisa masuk ke server atau mengalami lag?</span>
