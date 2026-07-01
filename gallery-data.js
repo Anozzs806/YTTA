@@ -113,7 +113,7 @@ const playersData = {
         skin: "Steve",
         photos: [
             { url: "https://lh3.googleusercontent.com/d/1OtSwyrEmaPRRfb1Rx39tjBjVCa5oRMqc", label: "Rumah RAY", desc: "Tempat Tinggal Ray" },
-            { url: "https://lh3.googleusercontent.com/d/1wN1RD5SgfoM1Bl8k2vhKJVk1Mm29Fwgg", label: "KitaNet", desc: "Mabar Kuy YAHAHAHA" },
+            { url: "https://lh3.googleusercontent.com/d/1zBM4jZZAUc7oYJMdHu6SdjMNLy8my5aZ", label: "KitaNet", desc: "Mabar Kuy YAHAHAHA" },
             { url: "", label: "Coming Soon", desc: "" },
             { url: "", label: "Coming Soon", desc: "" },
             { url: "", label: "Coming Soon", desc: "" },
