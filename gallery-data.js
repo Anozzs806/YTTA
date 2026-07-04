@@ -37,7 +37,7 @@ const playersData = {
             { url: "https://lh3.googleusercontent.com/d/1BNUe_DLPFI7D3KmemgRCxM37SLWCt-n4", label: "Patung Monumen", desc: "Angel" },
             { url: "https://lh3.googleusercontent.com/d/1PVsxPLD7gqUo4rYZSKlhmx_UPoaXarUq", label: "Serenity Pond", desc: "A peaceful little pond where players can rest, fish, and enjoy the scenery." },
             { url: "https://lh3.googleusercontent.com/d/1pomTK7QyCu_MXOmDcH_Hod8ZPsnrKlYI", label: "Rumah Makan Padang", desc: "Restaurant Padang" },
-            { url: "https://lh3.googleusercontent.com/d/1vqJePLl5Zs93ZXQtKsSfKeTB5WapF6fz", label: "?", desc: "?" },
+            { url: "https://lh3.googleusercontent.com/d/1vqJePLl5Zs93ZXQtKsSfKeTB5WapF6fz", label: "Malevolent Shrine", desc: "Step into the domain of the King of Curses! This build is a faithful recreation of Sukuna’s Malevolent Shrine (Sukuna's Domain Expansion) from Jujutsu Kaisen, masterfully designed as a fully functional Nether Portal. Masuklah ke dalam domain Raja Kutukan Build ini adalah rekreasi dari Malevolent Shrine (Domain Expansion Sukuna) dari Jujutsu Kaisen yang dirancang sebagai Nether Portal." },
             { url: "", label: "Coming Soon", desc: "" },
             { url: "", label: "Coming Soon", desc: "" }
         ]
