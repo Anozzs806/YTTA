@@ -34,10 +34,10 @@ const playersData = {
         role: "KULI",
         skin: "TakeAll",
         photos: [
-            { url: "https://lh3.googleusercontent.com/d/1IpQE8TXrwhMXqnPu1DbrF-y-O8b0GiP7", label: "Patung Monumen", desc: "Angel" },
+            { url: "https://lh3.googleusercontent.com/d/1BNUe_DLPFI7D3KmemgRCxM37SLWCt-n4", label: "Patung Monumen", desc: "Angel" },
             { url: "https://lh3.googleusercontent.com/d/1PVsxPLD7gqUo4rYZSKlhmx_UPoaXarUq", label: "Serenity Pond", desc: "A peaceful little pond where players can rest, fish, and enjoy the scenery." },
             { url: "https://lh3.googleusercontent.com/d/1pomTK7QyCu_MXOmDcH_Hod8ZPsnrKlYI", label: "Rumah Makan Padang", desc: "Restaurant Padang" },
-            { url: "", label: "Coming Soon", desc: "" },
+            { url: "https://lh3.googleusercontent.com/d/1vqJePLl5Zs93ZXQtKsSfKeTB5WapF6fz", label: "?", desc: "?" },
             { url: "", label: "Coming Soon", desc: "" },
             { url: "", label: "Coming Soon", desc: "" }
         ]
