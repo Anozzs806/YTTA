@@ -126,7 +126,7 @@ const playersData = {
         skin: "Steve",
         photos: [
             { url: "https://lh3.googleusercontent.com/d/1aeRbCcJqQGunCSij_eZ0WOoDRA_Lfy5_", label: "Small Vilalge", desc: "A cozy small village featuring charming houses, peaceful paths, and a welcoming atmosphere. Perfect for survival gameplay, roleplay, or building a thriving community in Minecraft." },
-            { url: "", label: "Coming Soon", desc: "" },
+            { url: "https://lh3.googleusercontent.com/d/1dTjWKDtgRg07IOexXn5mC6s_1ev34eZc", label: "Toko Ramen Abid", desc: "Small Shop Noodles" },
             { url: "", label: "Coming Soon", desc: "" },
             { url: "", label: "Coming Soon", desc: "" },
             { url: "", label: "Coming Soon", desc: "" },
