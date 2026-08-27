@@ -127,10 +127,14 @@ const playersData = {
         photos: [
             { url: "https://lh3.googleusercontent.com/d/1aeRbCcJqQGunCSij_eZ0WOoDRA_Lfy5_", label: "Small Vilalge", desc: "A cozy small village featuring charming houses, peaceful paths, and a welcoming atmosphere. Perfect for survival gameplay, roleplay, or building a thriving community in Minecraft." },
             { url: "https://lh3.googleusercontent.com/d/1dTjWKDtgRg07IOexXn5mC6s_1ev34eZc", label: "Toko Ramen Abid", desc: "Small Shop Noodles" },
-            { url: "", label: "Coming Soon", desc: "" },
-            { url: "", label: "Coming Soon", desc: "" },
-            { url: "", label: "Coming Soon", desc: "" },
-            { url: "", label: "Coming Soon", desc: "" }
+            { url: "https://lh3.googleusercontent.com/d/120OnyON9_GYW7QXoT1QK-dlyPbaBuMNs", label: "Cactus", desc: "" },
+            { url: "https://lh3.googleusercontent.com/d/13x6ZqUlN5aRHkWG4oie4VI407QgOc-Yi", label: "Welcome", desc: "" },
+            { url: "https://lh3.googleusercontent.com/d/1m8X2icfLnb4CIYkrRMUmd6HJ5Iu8O24n", label: "Portal", desc: "" },
+            { url: "https://lh3.googleusercontent.com/d/1fAVX92_umFbDOTEHvRz8tdk-JSHnMEOs", label: "Pikachu", desc: "" },
+            { url: "https://lh3.googleusercontent.com/d/1eNzuf0sH-MzqKUMfcgXAjzPG3vBcIVIv", label: "Shop", desc: "" },
+            { url: "https://lh3.googleusercontent.com/d/1DF_53pJXBx0PRc4i3h7K40amLzJHHWs3", label: "Nusantara Project", desc: "" },
+            { url: "https://lh3.googleusercontent.com/d/1miGXwFMeuN9YNMLig2mkg0t38jMWQ_NB", label: "Nusantara Project", desc: "" }
+            
         ]
     },
     "Steve3": {
